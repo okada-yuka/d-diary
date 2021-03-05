@@ -10,11 +10,12 @@
 		B1D0EA6EDCEE4C0D3A90441E /* Pods_d_diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6F5D4583B932D86ABFD5AC /* Pods_d_diary.framework */; };
 		C18325A225F2314A008A410E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18325A125F2314A008A410E /* AppDelegate.swift */; };
 		C18325A425F2314A008A410E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18325A325F2314A008A410E /* SceneDelegate.swift */; };
-		C18325A625F2314A008A410E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18325A525F2314A008A410E /* ViewController.swift */; };
+		C18325A625F2314A008A410E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18325A525F2314A008A410E /* MainViewController.swift */; };
 		C18325A925F2314A008A410E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18325A725F2314A008A410E /* Main.storyboard */; };
 		C18325AB25F2314B008A410E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18325AA25F2314B008A410E /* Assets.xcassets */; };
 		C18325AE25F2314B008A410E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18325AC25F2314B008A410E /* LaunchScreen.storyboard */; };
 		C1E6853C25F2397400F5CBF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E6853B25F2397400F5CBF9 /* Constants.swift */; };
+		C1E6854525F28EDB00F5CBF9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E6854425F28EDB00F5CBF9 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,13 @@
 		C183259E25F2314A008A410E /* d-diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "d-diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18325A125F2314A008A410E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18325A325F2314A008A410E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C18325A525F2314A008A410E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C18325A525F2314A008A410E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C18325A825F2314A008A410E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C18325AA25F2314B008A410E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C18325AD25F2314B008A410E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18325AF25F2314B008A410E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1E6853B25F2397400F5CBF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C1E6854425F28EDB00F5CBF9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +78,13 @@
 			children = (
 				C18325A125F2314A008A410E /* AppDelegate.swift */,
 				C18325A325F2314A008A410E /* SceneDelegate.swift */,
-				C18325A525F2314A008A410E /* ViewController.swift */,
+				C18325A525F2314A008A410E /* MainViewController.swift */,
 				C18325A725F2314A008A410E /* Main.storyboard */,
 				C18325AA25F2314B008A410E /* Assets.xcassets */,
 				C18325AC25F2314B008A410E /* LaunchScreen.storyboard */,
 				C18325AF25F2314B008A410E /* Info.plist */,
 				C1E6853B25F2397400F5CBF9 /* Constants.swift */,
+				C1E6854425F28EDB00F5CBF9 /* SignInViewController.swift */,
 			);
 			path = "d-diary";
 			sourceTree = "<group>";
@@ -208,9 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C18325A625F2314A008A410E /* ViewController.swift in Sources */,
+				C18325A625F2314A008A410E /* MainViewController.swift in Sources */,
 				C18325A225F2314A008A410E /* AppDelegate.swift in Sources */,
 				C18325A425F2314A008A410E /* SceneDelegate.swift in Sources */,
+				C1E6854525F28EDB00F5CBF9 /* SignInViewController.swift in Sources */,
 				C1E6853C25F2397400F5CBF9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

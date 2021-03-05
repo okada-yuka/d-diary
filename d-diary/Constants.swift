@@ -11,7 +11,7 @@ import AWSCognitoIdentityProvider
 struct CognitoConstants {
     // UserPool の各情報をもとにそれぞれの値を設定する.
     /// ユーザープールを設定しているリージョン.
-    static let IdentityUserPoolRegion: AWSRegionType = .Unknown
+    static let IdentityUserPoolRegion: AWSRegionType = AWSRegionType.APNortheast1
     /// ユーザープールID.
     static let IdentityUserPoolId: String = "ap-northeast-1_eHYnnsVIo"
     /// アプリクライアントID.
