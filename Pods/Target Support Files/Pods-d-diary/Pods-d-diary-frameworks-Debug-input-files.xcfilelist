@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-d-diary/Pods-d-diary-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework
+${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework
+${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework
