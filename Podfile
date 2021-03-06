@@ -8,4 +8,7 @@ target 'd-diary' do
   # Pods for d-diary
   pod 'AWSCore'
   pod 'AWSCognitoIdentityProvider'
+  pod 'AWSMobileClient'
+  pod 'AWSAuthUI'
+  pod 'AWSUserPoolsSignIn'
 end

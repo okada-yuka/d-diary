@@ -1,75 +1,67 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  d-diary
 //
-//  Created by Yuka Okada on 2021/03/05.
+//  Created by Yuka Okada on 2021/03/07.
 //
-import AWSCognitoIdentityProvider
+
 import UIKit
+import AWSMobileClient
 
-class MainViewController: UIViewController {
+class MainViewController: UITabBarController {
 
-
-    @IBOutlet weak var signInBtn: UIButton!
-    @IBOutlet weak var signOutBtn: UIButton!
-    @IBOutlet weak var userLab: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-    }
-
-    // viewが表示される直前に呼ばれる（バックグラウンド復帰，タブ切り替え後にも呼ばれる）
-    override func viewWillAppear(_ animated: Bool) {
-        // エラー箇所
-        let pool: AWSCognitoIdentityUserPool
-            = AWSCognitoIdentityUserPool(forKey: CognitoConstants.SignInProviderKey)
-        let user: AWSCognitoIdentityUser? = pool.currentUser()
-        user?.getSession().continueWith { (task) in
-            // セッションが切れている場合, サインアウトする.
-            if task.result == nil {
-                user?.signOut()
-            } else {
-                // サインインしているときは「サインイン」ボタンを無効化して隠す.
-                self.signInBtn.isEnabled = false
-                self.signInBtn.isHidden = true
-                // 「サインアウト」ボタン、ラベルを有効化して表示する.
-                self.signOutBtn.isEnabled = true
-                self.signOutBtn.isHidden = false
-                self.userLab.text = user!.username! + "さんが\nサインインしています。"
-                self.userLab.isHidden = false
+        
+        AWSMobileClient.sharedInstance().initialize { (UserState, error) in
+            if let userState = UserState {
+                switch (UserState) {
+                case .signedIn:
+                    DispatchQueue.main.async {
+                        print("Sign In")
+                    }
+                case .signedOut:
+                    AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (UserState, error) in
+                        if (error == nil){ //サインイン成功時
+                            DispatchQueue.main.async {
+                                print("Sign In")
+                            }
+                        }
+                    })
+                default:
+                    AWSMobileClient.sharedInstance().signOut()
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
             }
-            return nil
-        }.waitUntilFinished()
+        }
     }
     
-    @IBAction func signInBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "SignIn", sender: nil)
-    }
-    
-    @IBAction func signOutBtn(_ sender: Any) {
-        let alertController: UIAlertController = UIAlertController(
-            title: "サインアウトしますか？", message: nil, preferredStyle: .alert)
-        let signOut: UIAlertAction = UIAlertAction(
-            title: "サインアウトする", style: .default,
-            handler: { (action: UIAlertAction!) in
-                // エラー箇所
-                let pool: AWSCognitoIdentityUserPool
-                    = AWSCognitoIdentityUserPool(forKey: CognitoConstants.SignInProviderKey)!
-                pool.currentUser()?.signOut()
-                // 「サインイン」ボタンを有効化して表示する.
-                self.signInBtn.isEnabled = true
-                self.signInBtn.isHidden = false
-                // 「サインアウト」ボタン、ラベルを無効化して隠す.
-                self.signOutBtn.isEnabled = false
-                self.signOutBtn.isHidden = true
-                self.userLab.isHidden = true
+    @IBAction func pushSignoutButton(_ sender: Any) {
+        // サインアウト処理
+        AWSMobileClient.sharedInstance().signOut()
+        
+        // サインイン画面を表示
+        AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (userState, error) in
+            if (error == nil){ //サインイン成功時
+                DispatchQueue.main.async {
+                    print("Sign In")
+                }
+            }
         })
-        let cancel: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
-        alertController.addAction(signOut)
-        alertController.addAction(cancel)
-        self.present(alertController, animated: true, completion: nil)
     }
     
-}
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

@@ -1,0 +1,37 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ddiary-dev-21514-authRole",
+      "UnauthRoleArn": "arn:aws:iam::426296560234:role/amplify-ddiary-dev-21514-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::426296560234:role/amplify-ddiary-dev-21514-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-ddiary-dev-21514-deployment",
+      "UnauthRoleName": "amplify-ddiary-dev-21514-unauthRole",
+      "StackName": "amplify-ddiary-dev-21514",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:426296560234:stack/amplify-ddiary-dev-21514/853bca00-7e9f-11eb-9eed-0e4e9a878397",
+      "AmplifyAppId": "d12agp5tbk45az"
+    }
+  },
+  "auth": {
+    "ddiary0a39f461": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ddiary-dev-21514-deployment/amplify-cfn-templates/auth/ddiary0a39f461-cloudformation-template.yml",
+        "logicalId": "authddiary0a39f461"
+      },
+      "lastPushTimeStamp": "2021-03-06T17:26:51.951Z",
+      "output": {
+        "UserPoolId": "ap-northeast-1_FMDYDgzCP",
+        "AppClientIDWeb": "6taoj47352q35eat1ek3432d5p",
+        "AppClientID": "72tes8t4htiaqa40hn7f3ge9k5",
+        "IdentityPoolId": "ap-northeast-1:92790cfe-0138-46d7-aa95-28a19644d7dd",
+        "IdentityPoolName": "ddiary0a39f461_identitypool_0a39f461__dev",
+        "UserPoolName": "ddiary0a39f461_userpool_0a39f461"
+      },
+      "lastPushDirHash": "XSIgXNounGH5U/G83LJ8UEmZ20M="
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "ddiary0a39f461": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
