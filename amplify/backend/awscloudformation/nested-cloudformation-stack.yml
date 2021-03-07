@@ -68,15 +68,15 @@
         }
       }
     },
-    "authddiary0a39f461": {
+    "authdiaryappb0ebb421": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-ddiary-dev-21514-deployment/amplify-cfn-templates/auth/ddiary0a39f461-cloudformation-template.yml",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122903-deployment/amplify-cfn-templates/auth/diaryappb0ebb421-cloudformation-template.yml",
         "Parameters": {
-          "identityPoolName": "ddiary0a39f461_identitypool_0a39f461",
+          "identityPoolName": "diaryappb0ebb421_identitypool_b0ebb421",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "ddiary0a39f461",
-          "userPoolName": "ddiary0a39f461_userpool_0a39f461",
+          "resourceNameTruncated": "diaryab0ebb421",
+          "userPoolName": "diaryappb0ebb421_userpool_b0ebb421",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -92,10 +92,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "ddiary0a39f461_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "diaryab0ebb421_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "0a39f461",
-          "resourceName": "ddiary0a39f461",
+          "sharedId": "b0ebb421",
+          "resourceName": "diaryappb0ebb421",
           "authSelections": "identityPoolAndUserPool",
           "authRoleArn": {
             "Fn::GetAtt": [
@@ -122,7 +122,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authddiary0a39f461"
+        "authdiaryappb0ebb421"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -205,7 +205,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authddiary0a39f461",
+            "authdiaryappb0ebb421",
             "Outputs.IdentityPoolId"
           ]
         },
