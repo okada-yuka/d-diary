@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
-//  navigation-test
+//  TabViewController.swift
+//  diary-app
 //
-//  Created by Yuka Okada on 2021/03/07.
+//  Created by Yuka Okada on 2021/03/08.
 //
 
 import UIKit
 import AWSMobileClient
 
-class ViewController: UIViewController {
+class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
             if let userState = UserState {
                 switch (UserState) {
@@ -36,16 +36,17 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-        
     }
     
-    
-    
-    
-    @IBAction func pushNextButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toSecond", sender: nil)
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
-

@@ -10,10 +10,14 @@
 		1704B19FBCC755598E5C360E /* Pods_diary_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553961076B68DE7C4128D88 /* Pods_diary_app.framework */; };
 		C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD625F46B7D00423DCA /* AppDelegate.swift */; };
 		C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */; };
-		C16FFADB25F46B7D00423DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFADA25F46B7D00423DCA /* ViewController.swift */; };
+		C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFADA25F46B7D00423DCA /* GoalViewController.swift */; };
 		C16FFADE25F46B7D00423DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADC25F46B7D00423DCA /* Main.storyboard */; };
 		C16FFAE025F46B7F00423DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADF25F46B7F00423DCA /* Assets.xcassets */; };
 		C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */; };
+		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
+		C1C1A46C25F522D0005D5784 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46B25F522D0005D5784 /* Constants.swift */; };
+		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
+		C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FABA8625F52B5800F4C991 /* TabViewController.swift */; };
 		C57FC03B793B425286A7620D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = C30E727838F548FBA5CCBE6B /* awsconfiguration.json */; };
 		E8FCBA1EE460490081DE4C49 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 29AF692C7BAC4A3CA6BE8354 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
@@ -27,11 +31,15 @@
 		C16FFAD325F46B7D00423DCA /* diary-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "diary-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16FFAD625F46B7D00423DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C16FFADA25F46B7D00423DCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C16FFADA25F46B7D00423DCA /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		C16FFADD25F46B7D00423DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C16FFADF25F46B7F00423DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16FFAE225F46B7F00423DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C16FFAE425F46B7F00423DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C1C1A46B25F522D0005D5784 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		C1FABA8625F52B5800F4C991 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C30E727838F548FBA5CCBE6B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; name = awsconfiguration.json; path = ./awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,11 +99,15 @@
 			children = (
 				C16FFAD625F46B7D00423DCA /* AppDelegate.swift */,
 				C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */,
-				C16FFADA25F46B7D00423DCA /* ViewController.swift */,
+				C16FFADA25F46B7D00423DCA /* GoalViewController.swift */,
 				C16FFADC25F46B7D00423DCA /* Main.storyboard */,
 				C16FFADF25F46B7F00423DCA /* Assets.xcassets */,
 				C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */,
 				C16FFAE425F46B7F00423DCA /* Info.plist */,
+				C1C1A45D25F51923005D5784 /* ProfileViewController.swift */,
+				C1C1A46B25F522D0005D5784 /* Constants.swift */,
+				C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */,
+				C1FABA8625F52B5800F4C991 /* TabViewController.swift */,
 			);
 			path = "diary-app";
 			sourceTree = "<group>";
@@ -224,8 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C16FFADB25F46B7D00423DCA /* ViewController.swift in Sources */,
+				C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */,
+				C1C1A46C25F522D0005D5784 /* Constants.swift in Sources */,
+				C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */,
 				C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */,
+				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,
+				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
 				C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
