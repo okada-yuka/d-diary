@@ -49,6 +49,7 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
         self.parent?.navigationItem.title = "プロフィール"
+        
     }
     
     /*

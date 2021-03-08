@@ -13,6 +13,11 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TabBarのアイコンの色（選択時）を設定
+        UITabBar.appearance().tintColor = Pallet.light_blue
+        // TabBarの背景色を設定
+        UITabBar.appearance().barTintColor = Pallet.bg_light_blue
+        
         // Do any additional setup after loading the view.
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
             if let userState = UserState {

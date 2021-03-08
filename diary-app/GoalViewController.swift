@@ -19,6 +19,8 @@ class GoalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
         self.parent?.navigationItem.title = "目標"
+        // 背景色を設定
+        view.backgroundColor = Pallet.bg_light_blue
     }
     
     @IBAction func pushNextButton(_ sender: Any) {

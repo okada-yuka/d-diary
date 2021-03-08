@@ -15,15 +15,15 @@ class NavigationViewController: UINavigationController {
 
         // Do any additional setup after loading the view.
         
-//        // ナビゲーションバーの背景色
-//        navigationBar.barTintColor = .white
-//        // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
-//        // navigationBar.tintColor = .black
-//        // ナビゲーションバーのテキストを変更する
-//        navigationBar.titleTextAttributes = [
-//            // 文字の色
-//            .foregroundColor: UIColor.blue
-//        ]
+        // ナビゲーションバーの背景色
+        navigationBar.barTintColor = Pallet.bg_light_blue
+        // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+        navigationBar.tintColor = Pallet.light_blue
+        // ナビゲーションバーのテキストを変更する
+        navigationBar.titleTextAttributes = [
+            // 文字の色
+            .foregroundColor: Pallet.light_blue
+        ]
     }
     
 

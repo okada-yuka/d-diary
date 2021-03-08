@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // 下記を追加
+        
         let accessKey = IAMConstans.accessKey
         let secretKey = IAMConstans.secretKey
         let provider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
 
         let configuration = AWSServiceConfiguration(
-            region: AWSRegionType.APNortheast1,  // regionは適宜変更してください
+            region: AWSRegionType.APNortheast1,
             credentialsProvider: provider)
 
         AWSServiceManager.default().defaultServiceConfiguration = configuration
