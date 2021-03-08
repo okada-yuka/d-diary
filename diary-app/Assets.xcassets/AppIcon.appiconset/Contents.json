@@ -21,11 +21,13 @@
       "size" : "29x29"
     },
     {
+      "filename" : "okaeru_80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "okaeru_120-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
@@ -68,6 +70,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "okaeru_80-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"

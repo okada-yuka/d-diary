@@ -10,4 +10,5 @@ target 'diary-app' do
   pod 'AWSAuthUI'
   pod 'AWSUserPoolsSignIn'
   pod 'AWSS3'
+  pod 'AWSDynamoDB'
 end
