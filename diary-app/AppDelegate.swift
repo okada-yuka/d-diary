@@ -16,18 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //AWSサービス設定を作成
-        let serviceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(
-            region: CognitoConstants.IdentityUserPoolRegion, credentialsProvider: nil
-        )
-        
-        //ユーザプール設定を作成
-        let userPoolConfiguration: AWSCognitoIdentityUserPoolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoConstants.AppClientId, clientSecret: CognitoConstants.AppClientSecret, poolId: CognitoConstants.IdentityUserPoolId)
-        
-        //ユーザプールクライアントを初期化
-        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: userPoolConfiguration, forKey: CognitoConstants.SignInProviderKey)
-        
-        
+   
         return true
     }
 

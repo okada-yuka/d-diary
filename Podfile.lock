@@ -14,6 +14,8 @@ PODS:
     - AWSCognitoIdentityProvider (= 2.23.1)
     - AWSCognitoIdentityProviderASF (= 2.23.1)
     - AWSCore (= 2.23.1)
+  - AWSS3 (2.23.1):
+    - AWSCore (= 2.23.1)
   - AWSUserPoolsSignIn (2.23.1):
     - AWSAuthCore (= 2.23.1)
     - AWSCognitoIdentityProvider (= 2.23.1)
@@ -22,6 +24,7 @@ PODS:
 DEPENDENCIES:
   - AWSAuthUI
   - AWSMobileClient
+  - AWSS3
   - AWSUserPoolsSignIn
 
 SPEC REPOS:
@@ -32,6 +35,7 @@ SPEC REPOS:
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSMobileClient
+    - AWSS3
     - AWSUserPoolsSignIn
 
 SPEC CHECKSUMS:
@@ -41,8 +45,9 @@ SPEC CHECKSUMS:
   AWSCognitoIdentityProviderASF: f9b0d373dfce6d5395f0b69f2301f5db927d9fc8
   AWSCore: 48bf561f5fb3616ef42c1f7f3eeb4b502d11f69d
   AWSMobileClient: ffe1179b9e6d5db7cea3f807df7d47f5d00a5c65
+  AWSS3: 66bf4071639d0bebaec10e7b6587712df5f05a26
   AWSUserPoolsSignIn: 5397fa0da35e78d9ca8404dbaa0b8be080797418
 
-PODFILE CHECKSUM: eb821cc73d56902cbe2d9ac87c8e044dcf783383
+PODFILE CHECKSUM: 39e47cad8783cc3bbb498c05fb658a1083357e95
 
 COCOAPODS: 1.10.1

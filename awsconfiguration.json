@@ -23,5 +23,11 @@
         "Default": {
             "authenticationFlowType": "USER_SRP_AUTH"
         }
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "diaryappec38cdd8c8d84793aea150771ed63945122903-dev",
+            "Region": "ap-northeast-1"
+        }
     }
 }

@@ -8,6 +8,7 @@
 import UIKit
 import AWSMobileClient
 import AWSCore
+import AWSS3
 
 class ProfileViewController: UIViewController {
 
@@ -27,8 +28,8 @@ class ProfileViewController: UIViewController {
 
 
     }
-    
 
+    
     /*
     // MARK: - Navigation
 

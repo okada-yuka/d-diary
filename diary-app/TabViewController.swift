@@ -19,7 +19,7 @@ class TabViewController: UITabBarController {
                 switch (UserState) {
                 case .signedIn:
                     DispatchQueue.main.async {
-                        print("Sign In")
+                        print("Logged In")
                     }
                 case .signedOut:
                     AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (UserState, error) in

@@ -9,4 +9,5 @@ target 'diary-app' do
   pod 'AWSMobileClient'
   pod 'AWSAuthUI'
   pod 'AWSUserPoolsSignIn'
+  pod 'AWSS3'
 end

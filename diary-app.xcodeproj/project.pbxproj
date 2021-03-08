@@ -15,7 +15,6 @@
 		C16FFAE025F46B7F00423DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADF25F46B7F00423DCA /* Assets.xcassets */; };
 		C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */; };
 		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
-		C1C1A46C25F522D0005D5784 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46B25F522D0005D5784 /* Constants.swift */; };
 		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
 		C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FABA8625F52B5800F4C991 /* TabViewController.swift */; };
 		C57FC03B793B425286A7620D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = C30E727838F548FBA5CCBE6B /* awsconfiguration.json */; };
@@ -37,7 +36,6 @@
 		C16FFAE225F46B7F00423DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C16FFAE425F46B7F00423DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C1C1A46B25F522D0005D5784 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		C1FABA8625F52B5800F4C991 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C30E727838F548FBA5CCBE6B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; name = awsconfiguration.json; path = ./awsconfiguration.json; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */,
 				C16FFAE425F46B7F00423DCA /* Info.plist */,
 				C1C1A45D25F51923005D5784 /* ProfileViewController.swift */,
-				C1C1A46B25F522D0005D5784 /* Constants.swift */,
 				C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */,
 				C1FABA8625F52B5800F4C991 /* TabViewController.swift */,
 			);
@@ -237,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */,
-				C1C1A46C25F522D0005D5784 /* Constants.swift in Sources */,
 				C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */,
 				C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */,
 				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,

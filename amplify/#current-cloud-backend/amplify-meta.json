@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122903-deployment/amplify-cfn-templates/auth/diaryappb0ebb421-cloudformation-template.yml",
         "logicalId": "authdiaryappb0ebb421"
       },
-      "lastPushTimeStamp": "2021-03-07T03:43:00.801Z",
+      "lastPushTimeStamp": "2021-03-08T04:03:21.229Z",
       "output": {
         "UserPoolId": "ap-northeast-1_JagCUUqAN",
         "AppClientIDWeb": "38uuf3i8c9210hhljbtksu83s5",
@@ -32,6 +32,22 @@
         "UserPoolName": "diaryappb0ebb421_userpool_b0ebb421"
       },
       "lastPushDirHash": "8A2kbMDH4fTcMDGhMt51ogLhCaM="
+    }
+  },
+  "storage": {
+    "diaryapp": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122903-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storagediaryapp"
+      },
+      "lastPushTimeStamp": "2021-03-08T04:03:21.238Z",
+      "output": {
+        "BucketName": "diaryappec38cdd8c8d84793aea150771ed63945122903-dev",
+        "Region": "ap-northeast-1"
+      },
+      "lastPushDirHash": "g3UVuHK2znI76gZiQUNMof286Lw="
     }
   }
 }

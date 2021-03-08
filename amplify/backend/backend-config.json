@@ -6,5 +6,11 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "storage": {
+    "diaryapp": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
