@@ -123,10 +123,20 @@
         <!--Push Button-->
         <scene sceneID="WzB-I3-YiA">
             <objects>
-                <viewController id="Yye-er-aQz" sceneMemberID="viewController">
+                <viewController id="Yye-er-aQz" customClass="NextViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57p-4w-30O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85n-Ad-ru5">
+                                <rect key="frame" x="182" y="433" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LogOut"/>
+                                <connections>
+                                    <action selector="pushSignOutButton:" destination="Yye-er-aQz" eventType="touchUpInside" id="csI-Zt-AKM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MzZ-Fy-RlC"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
