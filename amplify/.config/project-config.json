@@ -4,5 +4,10 @@
   "frontend": "ios",
   "providers": [
     "awscloudformation"
-  ]
+  ],
+  "ios": {
+    "config": {
+      "ServerlessContainers": true
+    }
+  }
 }

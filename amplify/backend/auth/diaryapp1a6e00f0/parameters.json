@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "diaryappb0ebb421_identitypool_b0ebb421",
+    "identityPoolName": "diaryapp1a6e00f0_identitypool_1a6e00f0",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "diaryab0ebb421",
-    "userPoolName": "diaryappb0ebb421_userpool_b0ebb421",
+    "resourceNameTruncated": "diarya1a6e00f0",
+    "userPoolName": "diaryapp1a6e00f0_userpool_1a6e00f0",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "diaryab0ebb421_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "diarya1a6e00f0_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "b0ebb421",
-    "resourceName": "diaryappb0ebb421",
+    "sharedId": "1a6e00f0",
+    "resourceName": "diaryapp1a6e00f0",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -46,8 +46,13 @@
         ]
     },
     "useDefault": "default",
+    "triggers": "{}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
     "dependsOn": []
 }

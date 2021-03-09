@@ -68,15 +68,15 @@
         }
       }
     },
-    "authdiaryappb0ebb421": {
+    "authdiaryapp1a6e00f0": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122903-deployment/amplify-cfn-templates/auth/diaryappb0ebb421-cloudformation-template.yml",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/auth/diaryapp1a6e00f0-cloudformation-template.yml",
         "Parameters": {
-          "identityPoolName": "diaryappb0ebb421_identitypool_b0ebb421",
+          "identityPoolName": "diaryapp1a6e00f0_identitypool_1a6e00f0",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "diaryab0ebb421",
-          "userPoolName": "diaryappb0ebb421_userpool_b0ebb421",
+          "resourceNameTruncated": "diarya1a6e00f0",
+          "userPoolName": "diaryapp1a6e00f0_userpool_1a6e00f0",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -92,10 +92,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "diaryab0ebb421_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "diarya1a6e00f0_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "b0ebb421",
-          "resourceName": "diaryappb0ebb421",
+          "sharedId": "1a6e00f0",
+          "resourceName": "diaryapp1a6e00f0",
           "authSelections": "identityPoolAndUserPool",
           "authRoleArn": {
             "Fn::GetAtt": [
@@ -110,22 +110,38 @@
             ]
           },
           "useDefault": "default",
+          "triggers": "{}",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
           "usernameCaseSensitive": false,
+          "parentStack": {
+            "Ref": "AWS::StackId"
+          },
+          "permissions": "",
           "dependsOn": "",
           "env": "dev"
         }
       }
     },
-    "storagediaryapp": {
+    "functionS3Trigger958743ac": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122903-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/function/S3Trigger958743ac-cloudformation-template.json",
         "Parameters": {
-          "bucketName": "diaryappec38cdd8c8d84793aea150771ed63945",
-          "authPolicyName": "s3_amplify_c38dcbcf",
-          "unauthPolicyName": "s3_amplify_c38dcbcf",
+          "deploymentBucketName": "amplify-diaryapp-dev-230131-deployment",
+          "s3Key": "amplify-builds/S3Trigger958743ac-5456397346447669697a-build.zip",
+          "env": "dev"
+        }
+      }
+    },
+    "storageiOSapps": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "Parameters": {
+          "bucketName": "diary-app",
+          "authPolicyName": "s3_amplify_df8b3172",
+          "unauthPolicyName": "s3_amplify_df8b3172",
           "authRoleName": {
             "Ref": "AuthRoleName"
           },
@@ -133,21 +149,39 @@
             "Ref": "UnauthRoleName"
           },
           "selectedGuestPermissions": "s3:GetObject,s3:ListBucket",
-          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
-          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PublicPolicy": "Public_policy_2e18ccbb",
+          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket",
+          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject",
+          "s3PublicPolicy": "Public_policy_d18f3d6b",
           "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-          "s3UploadsPolicy": "Uploads_policy_2e18ccbb",
-          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3ProtectedPolicy": "Protected_policy_2e18ccbb",
-          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PrivatePolicy": "Private_policy_2e18ccbb",
+          "s3UploadsPolicy": "Uploads_policy_d18f3d6b",
+          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject",
+          "s3ProtectedPolicy": "Protected_policy_d18f3d6b",
+          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject",
+          "s3PrivatePolicy": "Private_policy_d18f3d6b",
           "AuthenticatedAllowList": "ALLOW",
-          "s3ReadPolicy": "read_policy_2e18ccbb",
+          "s3ReadPolicy": "read_policy_d18f3d6b",
           "s3PermissionsGuestPublic": "DISALLOW",
           "s3PermissionsGuestUploads": "DISALLOW",
           "GuestAllowList": "DISALLOW",
-          "triggerFunction": "NONE",
+          "triggerFunction": "S3Trigger958743ac",
+          "functionS3Trigger958743acName": {
+            "Fn::GetAtt": [
+              "functionS3Trigger958743ac",
+              "Outputs.Name"
+            ]
+          },
+          "functionS3Trigger958743acArn": {
+            "Fn::GetAtt": [
+              "functionS3Trigger958743ac",
+              "Outputs.Arn"
+            ]
+          },
+          "functionS3Trigger958743acLambdaExecutionRole": {
+            "Fn::GetAtt": [
+              "functionS3Trigger958743ac",
+              "Outputs.LambdaExecutionRole"
+            ]
+          },
           "env": "dev"
         }
       }
@@ -156,7 +190,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authdiaryappb0ebb421"
+        "authdiaryapp1a6e00f0"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -239,7 +273,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authdiaryappb0ebb421",
+            "authdiaryapp1a6e00f0",
             "Outputs.IdentityPoolId"
           ]
         },

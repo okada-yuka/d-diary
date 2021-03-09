@@ -7,27 +7,21 @@
     "CredentialsProvider": {
         "CognitoIdentity": {
             "Default": {
-                "PoolId": "ap-northeast-1:a42f11b4-a893-461e-b9ee-f38f432c1c09",
+                "PoolId": "ap-northeast-1:542b90bf-9d9f-4d61-8494-1786269b766a",
                 "Region": "ap-northeast-1"
             }
         }
     },
     "CognitoUserPool": {
         "Default": {
-            "PoolId": "ap-northeast-1_JagCUUqAN",
-            "AppClientId": "k1gvh0hroii19sr4rj035jd2i",
+            "PoolId": "ap-northeast-1_lgjoxp9Pn",
+            "AppClientId": "584nmfugejj3bb9na4aqjr0p7l",
             "Region": "ap-northeast-1"
         }
     },
     "Auth": {
         "Default": {
             "authenticationFlowType": "USER_SRP_AUTH"
-        }
-    },
-    "S3TransferUtility": {
-        "Default": {
-            "Bucket": "diaryappec38cdd8c8d84793aea150771ed63945122903-dev",
-            "Region": "ap-northeast-1"
         }
     }
 }

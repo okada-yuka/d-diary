@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "diaryapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authdiaryapp1a6e00f0",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
