@@ -54,6 +54,30 @@
                                     <action selector="pushS3Button:" destination="6KQ-du-RRg" eventType="touchUpInside" id="aYR-3C-gjF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-ws-13P">
+                                <rect key="frame" x="113" y="628" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dynamoにデータを追加"/>
+                                <connections>
+                                    <action selector="pushDataToDynamo:" destination="6KQ-du-RRg" eventType="touchUpInside" id="d8l-oy-xK5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qc-H3-bTl">
+                                <rect key="frame" x="106" y="681" width="179" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dynamoからデータを取得"/>
+                                <connections>
+                                    <action selector="getDynamoData:" destination="6KQ-du-RRg" eventType="touchUpInside" id="wCj-DE-xsO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZd-nO-32b">
+                                <rect key="frame" x="125" y="742" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="サブスクライブ開始"/>
+                                <connections>
+                                    <action selector="startSubscribe:" destination="6KQ-du-RRg" eventType="touchUpInside" id="fNF-bi-u6N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b2Z-ws-ggY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

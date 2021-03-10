@@ -20,12 +20,17 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
-        runMutation()
-        subscribe()
+
     }
     
+    // DynamoDBにデータを追加する
     func runMutation(){
+        
+        // CreateToDoInput関数：入力パラメータを作成
         let mutationInput = CreateTodoInput(name: "Use AppSync", description: "Realtime and Offline")
+        
+        // CreateTodoMutation関数：
+        // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
         appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
@@ -35,37 +40,46 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
                 print("Error saving the item on server: \(resultError)")
                 return
             }
-        
-            print("Mutation complete.")
-            self.runQuery()
+            
+            print("データを追加（runMutation）")
+            //print("Mutation complete.")
+            //self.runQuery()
         }
     }
     
+    // DynamoDBからデータを取得
     func runQuery(){
+        // 2回実行されてしまう（cachePolicyは消したら取得できなくなった）
         appSyncClient?.fetch(query: ListTodosQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
             if error != nil{
                 print(error?.localizedDescription ?? "")
                 return
             }
-            print("Query complete.")
+            print("データを取得（runQuery）")
+            //print("Query complete.")
+            // 取得したレコードのnameとdescriptionをコンソールに表示
             result?.data?.listTodos?.items!.forEach { print(($0?.name)! + " " + ($0?.description)!) }
         }
         
     }
     
+    // DynamoDBへのレコード追加状況を表示
     var discard: Cancellable?
     func subscribe() {
         do{
             discard = try appSyncClient?.subscribe(subscription: OnCreateTodoSubscription(), resultHandler: {(result, transaction, error) in
                 if let result = result {
-                    print("CreateTodo subscription data:"+result.data!.onCreateTodo!.name+" "
+                    //print("CreateTodo subscription data:")
+                    print("今追加されたデータを表示（subscribe）")
+                    print(result.data!.onCreateTodo!.name+" "
                                             + result.data!.onCreateTodo!.description!)
                 } else if let error = error {
                     print(error.localizedDescription)
                 }
             })
             
-            print("Subscribed to CreateTodo Mutations.")
+
+            //print("Subscribed to CreateTodo Mutations.")
             
         } catch {
             print("Error starting subscription.")
@@ -79,6 +93,20 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         view.backgroundColor = Pallet.bg_light_blue
     }
     
+    // DynamoDBにデータを追加する
+    @IBAction func pushDataToDynamo(_ sender: Any) {
+        runMutation()
+    }
+    
+    // DyanmoDBからデータを取得する
+    @IBAction func getDynamoData(_ sender: Any) {
+        runQuery()
+    }
+    
+    // DyanmoDBにデータが追加されたらそのデータを取得する（アップデート情報など）
+    @IBAction func startSubscribe(_ sender: Any) {
+        subscribe()
+    }
     
     @IBAction func pushNextButton(_ sender: Any) {
         self.performSegue(withIdentifier: "toSecond", sender: nil)
