@@ -68,15 +68,30 @@
         }
       }
     },
-    "authdiaryapp1a6e00f0": {
+    "apidiaryapp": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/auth/diaryapp1a6e00f0-cloudformation-template.yml",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122558-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
-          "identityPoolName": "diaryapp1a6e00f0_identitypool_1a6e00f0",
+          "CreateAPIKey": 1,
+          "AppSyncApiName": "diaryapp",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-diaryapp-dev-122558-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/447ee44590812e8f585ac199d7eface2d2f8f006",
+          "env": "dev"
+        }
+      }
+    },
+    "authdiaryapp08c2e1ea": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122558-deployment/amplify-cfn-templates/auth/diaryapp08c2e1ea-cloudformation-template.yml",
+        "Parameters": {
+          "identityPoolName": "diaryapp08c2e1ea_identitypool_08c2e1ea",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "diarya1a6e00f0",
-          "userPoolName": "diaryapp1a6e00f0_userpool_1a6e00f0",
+          "resourceNameTruncated": "diarya08c2e1ea",
+          "userPoolName": "diaryapp08c2e1ea_userpool_08c2e1ea",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -92,10 +107,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "diarya1a6e00f0_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "diarya08c2e1ea_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "1a6e00f0",
-          "resourceName": "diaryapp1a6e00f0",
+          "sharedId": "08c2e1ea",
+          "resourceName": "diaryapp08c2e1ea",
           "authSelections": "identityPoolAndUserPool",
           "authRoleArn": {
             "Fn::GetAtt": [
@@ -110,78 +125,10 @@
             ]
           },
           "useDefault": "default",
-          "triggers": "{}",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
           "usernameCaseSensitive": false,
-          "parentStack": {
-            "Ref": "AWS::StackId"
-          },
-          "permissions": "",
           "dependsOn": "",
-          "env": "dev"
-        }
-      }
-    },
-    "functionS3Trigger958743ac": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/function/S3Trigger958743ac-cloudformation-template.json",
-        "Parameters": {
-          "deploymentBucketName": "amplify-diaryapp-dev-230131-deployment",
-          "s3Key": "amplify-builds/S3Trigger958743ac-5456397346447669697a-build.zip",
-          "env": "dev"
-        }
-      }
-    },
-    "storageiOSapps": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-230131-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
-        "Parameters": {
-          "bucketName": "diary-app",
-          "authPolicyName": "s3_amplify_df8b3172",
-          "unauthPolicyName": "s3_amplify_df8b3172",
-          "authRoleName": {
-            "Ref": "AuthRoleName"
-          },
-          "unauthRoleName": {
-            "Ref": "UnauthRoleName"
-          },
-          "selectedGuestPermissions": "s3:GetObject,s3:ListBucket",
-          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket",
-          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject",
-          "s3PublicPolicy": "Public_policy_d18f3d6b",
-          "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-          "s3UploadsPolicy": "Uploads_policy_d18f3d6b",
-          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject",
-          "s3ProtectedPolicy": "Protected_policy_d18f3d6b",
-          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject",
-          "s3PrivatePolicy": "Private_policy_d18f3d6b",
-          "AuthenticatedAllowList": "ALLOW",
-          "s3ReadPolicy": "read_policy_d18f3d6b",
-          "s3PermissionsGuestPublic": "DISALLOW",
-          "s3PermissionsGuestUploads": "DISALLOW",
-          "GuestAllowList": "DISALLOW",
-          "triggerFunction": "S3Trigger958743ac",
-          "functionS3Trigger958743acName": {
-            "Fn::GetAtt": [
-              "functionS3Trigger958743ac",
-              "Outputs.Name"
-            ]
-          },
-          "functionS3Trigger958743acArn": {
-            "Fn::GetAtt": [
-              "functionS3Trigger958743ac",
-              "Outputs.Arn"
-            ]
-          },
-          "functionS3Trigger958743acLambdaExecutionRole": {
-            "Fn::GetAtt": [
-              "functionS3Trigger958743ac",
-              "Outputs.LambdaExecutionRole"
-            ]
-          },
           "env": "dev"
         }
       }
@@ -190,7 +137,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authdiaryapp1a6e00f0"
+        "authdiaryapp08c2e1ea"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -273,7 +220,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authdiaryapp1a6e00f0",
+            "authdiaryapp08c2e1ea",
             "Outputs.IdentityPoolId"
           ]
         },

@@ -11,4 +11,5 @@ target 'diary-app' do
   pod 'AWSUserPoolsSignIn'
   pod 'AWSS3'
   pod 'AWSDynamoDB'
+  pod 'AWSAppSync'
 end

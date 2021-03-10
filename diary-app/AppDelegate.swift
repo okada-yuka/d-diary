@@ -8,10 +8,14 @@
 import UIKit
 import AWSCognitoIdentityProvider
 import AWSCore
+import AWSAppSync
+import AWSMobileClient
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var appSyncClient: AWSAppSyncClient?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,6 +28,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             credentialsProvider: provider)
 
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        
+
+            // Initialize the AWS AppSync configuration
+            /*
+            let databaseURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("database_name")
+
+            do {
+                //AppSync configuration & client initialization
+                let appSyncServiceConfig = try AWSAppSyncServiceConfig()
+                let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: appSyncServiceConfig, databaseURL: databaseURL)
+                appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
+                // Set id as the cache key for objects. See architecture section for details
+                appSyncClient?.apolloClient?.cacheKeyForObject = { $0["id"] }
+            } catch {
+                print("Error initializing appsync client. \(error)")
+            }
+            */
+
+        
+        do {
+            
+            // You can choose the directory in which AppSync stores its persistent cache databases
+            let cacheConfiguration = try AWSAppSyncCacheConfiguration()
+            
+            // Initialize the AWS AppSync configuration
+            let appSyncServiceConfig = try AWSAppSyncServiceConfig()
+            let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: appSyncServiceConfig, cacheConfiguration: cacheConfiguration)
+            
+            // Initialize the AWS AppSync client
+            appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
+            
+            // Set id as the cache key for objects. See architecture section for details
+            appSyncClient?.apolloClient?.cacheKeyForObject = { $0["id"] }
+            
+            print("Initialized appsync client.")
+            
+        } catch {
+            print("Error initializing appsync client. \(error)")
+        }
         
         return true
     }
@@ -44,4 +88,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
