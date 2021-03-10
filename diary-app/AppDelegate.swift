@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let secretKey = IAMConstans.secretKey
         let provider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
 
-        let configuration = AWSServiceConfiguration(
-            region: AWSRegionType.APNortheast1,
-            credentialsProvider: provider)
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.APNortheast1,credentialsProvider: provider)
 
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
