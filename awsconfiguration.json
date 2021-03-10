@@ -4,18 +4,27 @@
     "IdentityManager": {
         "Default": {}
     },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://zlxsfnkuxrf3jdkc3zs7hyidi4.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+            "Region": "ap-northeast-1",
+            "AuthMode": "API_KEY",
+            "ApiKey": "da2-ydunce67w5cmnplh6met523upy",
+            "ClientDatabasePrefix": "diaryapp_API_KEY"
+        }
+    },
     "CredentialsProvider": {
         "CognitoIdentity": {
             "Default": {
-                "PoolId": "ap-northeast-1:542b90bf-9d9f-4d61-8494-1786269b766a",
+                "PoolId": "ap-northeast-1:44937aa9-6301-4de6-b9e1-3e19c1ff9eae",
                 "Region": "ap-northeast-1"
             }
         }
     },
     "CognitoUserPool": {
         "Default": {
-            "PoolId": "ap-northeast-1_lgjoxp9Pn",
-            "AppClientId": "584nmfugejj3bb9na4aqjr0p7l",
+            "PoolId": "ap-northeast-1_dJRfDijCg",
+            "AppClientId": "7nblogs2tafil4ur6apq11hiq0",
             "Region": "ap-northeast-1"
         }
     },

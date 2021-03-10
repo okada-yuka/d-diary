@@ -1,19 +1,4 @@
 {
-  "auth": {
-    "diaryapp1a6e00f0": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
-  },
-  "function": {},
-  "storage": {
-    "iOSapp": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation"
-    }
-  },
   "api": {
     "diaryapp": {
       "service": "AppSync",
@@ -21,9 +6,10 @@
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authdiaryapp1a6e00f0"
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7,
+              "description": "diaryapp's API key"
             }
           },
           "additionalAuthenticationProviders": []
@@ -31,5 +17,12 @@
       }
     }
   },
-  "hosting": {}
+  "auth": {
+    "diaryapp08c2e1ea": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
 }
