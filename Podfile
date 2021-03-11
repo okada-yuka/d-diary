@@ -12,4 +12,5 @@ target 'diary-app' do
   pod 'AWSS3'
   pod 'AWSDynamoDB'
   pod 'AWSAppSync'
+  pod 'Amplify'
 end

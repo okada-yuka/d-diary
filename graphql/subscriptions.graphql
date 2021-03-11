@@ -2,8 +2,8 @@
 subscription OnCreateTodo {
   onCreateTodo {
     id
-    name
-    description
+    place
+    price
     createdAt
     updatedAt
   }
@@ -11,8 +11,8 @@ subscription OnCreateTodo {
 subscription OnUpdateTodo {
   onUpdateTodo {
     id
-    name
-    description
+    place
+    price
     createdAt
     updatedAt
   }
@@ -20,8 +20,8 @@ subscription OnUpdateTodo {
 subscription OnDeleteTodo {
   onDeleteTodo {
     id
-    name
-    description
+    place
+    price
     createdAt
     updatedAt
   }

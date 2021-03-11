@@ -2,8 +2,8 @@
 query GetTodo($id: ID!) {
   getTodo(id: $id) {
     id
-    name
-    description
+    place
+    price
     createdAt
     updatedAt
   }
@@ -16,8 +16,8 @@ query ListTodos(
   listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      name
-      description
+      place
+      price
       createdAt
       updatedAt
     }

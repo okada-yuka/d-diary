@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000E1023D6C04FA4ACCC7E69 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF896A67A54965A6C1D878 /* Todo.swift */; };
 		1704B19FBCC755598E5C360E /* Pods_diary_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553961076B68DE7C4128D88 /* Pods_diary_app.framework */; };
+		1FEE70D9D4E543B0B983E403 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171D56A89B04C69B4FB0478 /* AmplifyModels.swift */; };
+		40CBD19BEE224D808F23B932 /* Todo+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C9F934D0C486DB0DF2FCF /* Todo+Schema.swift */; };
 		C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127C52025F669AE004C6FA8 /* NextViewController.swift */; };
-		C1437C0925F875BE00D7CBEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0825F875BE00D7CBEA /* API.swift */; };
+		C1437C0C25F9B60300D7CBEA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0B25F9B60300D7CBEA /* User.swift */; };
+		C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */; };
+		C1437C4B25FA71F300D7CBEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C4A25FA71F300D7CBEA /* API.swift */; };
 		C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD625F46B7D00423DCA /* AppDelegate.swift */; };
 		C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */; };
 		C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFADA25F46B7D00423DCA /* GoalViewController.swift */; };
@@ -25,13 +30,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D2A5DFC63F44FE842D5697 /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/diaryapp/schema.graphql; sourceTree = "<group>"; };
 		20031F0517244B79BF17C158 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
 		29AF692C7BAC4A3CA6BE8354 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		3A7262DFA84B38BF9427E06C /* Pods-diary-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diary-app.release.xcconfig"; path = "Target Support Files/Pods-diary-app/Pods-diary-app.release.xcconfig"; sourceTree = "<group>"; };
 		4DCCD6EBCB87380AD6271EDB /* Pods-diary-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diary-app.debug.xcconfig"; path = "Target Support Files/Pods-diary-app/Pods-diary-app.debug.xcconfig"; sourceTree = "<group>"; };
+		7171D56A89B04C69B4FB0478 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		A553961076B68DE7C4128D88 /* Pods_diary_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diary_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCF896A67A54965A6C1D878 /* Todo.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = amplify/generated/models/Todo.swift; sourceTree = "<group>"; };
 		C127C52025F669AE004C6FA8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		C1437C0825F875BE00D7CBEA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C1437C0B25F9B60300D7CBEA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		C1437C4A25FA71F300D7CBEA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "diary-app/API.swift"; sourceTree = "<group>"; };
 		C16FFAD325F46B7D00423DCA /* diary-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "diary-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16FFAD625F46B7D00423DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,7 @@
 		C1ECD68725F68A4C00C0BAC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C1FABA8625F52B5800F4C991 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C30E727838F548FBA5CCBE6B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; name = awsconfiguration.json; path = ./awsconfiguration.json; sourceTree = "<group>"; };
+		CE1C9F934D0C486DB0DF2FCF /* Todo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Todo+Schema.swift"; path = "amplify/generated/models/Todo+Schema.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +75,20 @@
 			children = (
 				29AF692C7BAC4A3CA6BE8354 /* amplifyconfiguration.json */,
 				20031F0517244B79BF17C158 /* amplifytools.xcconfig */,
+				06D2A5DFC63F44FE842D5697 /* schema.graphql */,
 			);
 			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
+		6E5434F974294842B00224F3 /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				7171D56A89B04C69B4FB0478 /* AmplifyModels.swift */,
+				ACCF896A67A54965A6C1D878 /* Todo.swift */,
+				CE1C9F934D0C486DB0DF2FCF /* Todo+Schema.swift */,
+			);
+			name = AmplifyModels;
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -81,9 +104,11 @@
 		C16FFACA25F46B7D00423DCA = {
 			isa = PBXGroup;
 			children = (
-				C1437C0825F875BE00D7CBEA /* API.swift */,
+				6E5434F974294842B00224F3 /* AmplifyModels */,
+				C1437C0B25F9B60300D7CBEA /* User.swift */,
 				C30E727838F548FBA5CCBE6B /* awsconfiguration.json */,
 				5B09F2AD79354DFDB584188A /* AmplifyConfig */,
+				C1437C4A25FA71F300D7CBEA /* API.swift */,
 				C16FFAD525F46B7D00423DCA /* diary-app */,
 				C16FFAD425F46B7D00423DCA /* Products */,
 				9DAA44B711FE7D8AC135C20C /* Pods */,
@@ -114,6 +139,7 @@
 				C1FABA8625F52B5800F4C991 /* TabViewController.swift */,
 				C127C52025F669AE004C6FA8 /* NextViewController.swift */,
 				C1ECD68725F68A4C00C0BAC2 /* Constants.swift */,
+				C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */,
 			);
 			path = "diary-app";
 			sourceTree = "<group>";
@@ -248,9 +274,14 @@
 				C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */,
 				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,
 				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
+				C1437C4B25FA71F300D7CBEA /* API.swift in Sources */,
 				C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */,
-				C1437C0925F875BE00D7CBEA /* API.swift in Sources */,
+				C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */,
+				C1437C0C25F9B60300D7CBEA /* User.swift in Sources */,
 				C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */,
+				1FEE70D9D4E543B0B983E403 /* AmplifyModels.swift in Sources */,
+				000E1023D6C04FA4ACCC7E69 /* Todo.swift in Sources */,
+				40CBD19BEE224D808F23B932 /* Todo+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,15 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-diaryapp-dev-122558-authRole",
-      "UnauthRoleArn": "arn:aws:iam::426296560234:role/amplify-diaryapp-dev-122558-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::426296560234:role/amplify-diaryapp-dev-122558-authRole",
+      "AuthRoleName": "amplify-diaryapp-dev-140716-authRole",
+      "UnauthRoleArn": "arn:aws:iam::426296560234:role/amplify-diaryapp-dev-140716-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::426296560234:role/amplify-diaryapp-dev-140716-authRole",
       "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-diaryapp-dev-122558-deployment",
-      "UnauthRoleName": "amplify-diaryapp-dev-122558-unauthRole",
-      "StackName": "amplify-diaryapp-dev-122558",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:426296560234:stack/amplify-diaryapp-dev-122558/56000220-8150-11eb-bc04-0a65fce09a40",
-      "AmplifyAppId": "dw4fpnpsynhrt"
+      "DeploymentBucketName": "amplify-diaryapp-dev-140716-deployment",
+      "UnauthRoleName": "amplify-diaryapp-dev-140716-unauthRole",
+      "StackName": "amplify-diaryapp-dev-140716",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:426296560234:stack/amplify-diaryapp-dev-140716/a733fe30-8227-11eb-8aae-0e0aacd972cb",
+      "AmplifyAppId": "djj20xx2mjcmp"
     }
   },
   "api": {
@@ -27,38 +27,16 @@
           },
           "additionalAuthenticationProviders": []
         },
-        "GraphQLAPIIdOutput": "cgdiyw7fknfv7km7ajg3f7anlq",
-        "GraphQLAPIEndpointOutput": "https://zlxsfnkuxrf3jdkc3zs7hyidi4.appsync-api.ap-northeast-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-ydunce67w5cmnplh6met523upy"
+        "GraphQLAPIIdOutput": "dmwcszzrdncbxlpe5eqkbpb6bm",
+        "GraphQLAPIEndpointOutput": "https://a2zf74wzefhw5nhczrnb4fmq5a.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-gz6x5rtwhjaz5elldbjjryxsle"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122558-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-140716-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apidiaryapp"
       },
-      "lastPushTimeStamp": "2021-03-10T03:44:20.596Z",
-      "lastPushDirHash": "VxTp6FbWo2FtaECrT/Cidvm4h1c="
-    }
-  },
-  "auth": {
-    "diaryapp08c2e1ea": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-122558-deployment/amplify-cfn-templates/auth/diaryapp08c2e1ea-cloudformation-template.yml",
-        "logicalId": "authdiaryapp08c2e1ea"
-      },
-      "lastPushTimeStamp": "2021-03-10T03:44:20.602Z",
-      "output": {
-        "UserPoolId": "ap-northeast-1_dJRfDijCg",
-        "AppClientIDWeb": "1kufds45272csi7hofeh8pe5k1",
-        "AppClientID": "7nblogs2tafil4ur6apq11hiq0",
-        "IdentityPoolId": "ap-northeast-1:44937aa9-6301-4de6-b9e1-3e19c1ff9eae",
-        "IdentityPoolName": "diaryapp08c2e1ea_identitypool_08c2e1ea__dev",
-        "UserPoolName": "diaryapp08c2e1ea_userpool_08c2e1ea"
-      },
-      "lastPushDirHash": "mEaucqTvY1MmXj/oecnSgU+O0nc="
+      "lastPushTimeStamp": "2021-03-11T05:13:00.227Z",
+      "lastPushDirHash": "Ufx6zLJ8cloNM6Oc4nFk+TPQBUM="
     }
   }
 }

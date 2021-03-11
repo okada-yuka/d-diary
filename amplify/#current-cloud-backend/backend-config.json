@@ -16,13 +16,5 @@
         }
       }
     }
-  },
-  "auth": {
-    "diaryapp08c2e1ea": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
   }
 }

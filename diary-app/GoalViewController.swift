@@ -27,7 +27,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateTodoInput(name: "Use AppSync", description: "Realtime and Offline")
+        let mutationInput = CreateTodoInput(place: "MONOMONO cafe", price: 1200)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -58,7 +58,9 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
             print("データを取得（runQuery）")
             //print("Query complete.")
             // 取得したレコードのnameとdescriptionをコンソールに表示
-            result?.data?.listTodos?.items!.forEach { print(($0?.name)! + " " + ($0?.description)!) }
+            result?.data?.listTodos?.items!.forEach {
+                print(($0?.place)! + " \($0?.price)!")
+            }
         }
         
     }
@@ -71,8 +73,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
                 if let result = result {
                     //print("CreateTodo subscription data:")
                     print("今追加されたデータを表示（subscribe）")
-                    print(result.data!.onCreateTodo!.name+" "
-                                            + result.data!.onCreateTodo!.description!)
+                    print(result.data!.onCreateTodo!.place+" \(result.data!.onCreateTodo!.price!)")
                 } else if let error = error {
                     print(error.localizedDescription)
                 }

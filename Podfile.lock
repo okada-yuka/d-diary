@@ -1,4 +1,7 @@
 PODS:
+  - Amplify (1.6.1):
+    - Amplify/Default (= 1.6.1)
+  - Amplify/Default (1.6.1)
   - AppSyncRealTimeClient (1.4.3):
     - Starscream (~> 3.1.0)
   - AWSAppSync (3.1.17):
@@ -36,6 +39,7 @@ PODS:
   - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - Amplify
   - AWSAppSync
   - AWSAuthUI
   - AWSDynamoDB
@@ -45,6 +49,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Amplify
     - AppSyncRealTimeClient
     - AWSAppSync
     - AWSAuthCore
@@ -61,6 +66,7 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
+  Amplify: 4d0c3b0871e1f268c81ce5e9b65532df0a013900
   AppSyncRealTimeClient: 04df4dffe57cfbd06da336d0bfcd5641ba9adcb5
   AWSAppSync: 558d2d6935686411d7e1d813a0694621228be77f
   AWSAuthCore: d9f9c418df00f45f399e407dc6c2bce33870b0af
@@ -76,6 +82,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 600fe92a3feec2bc6926ea186ce08e44f553aff2
+PODFILE CHECKSUM: 5364bb858580f48b8624f30fd0866714f47a3f5c
 
 COCOAPODS: 1.10.1

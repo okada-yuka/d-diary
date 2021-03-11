@@ -6,50 +6,10 @@
             "awsAPIPlugin": {
                 "diaryapp": {
                     "endpointType": "GraphQL",
-                    "endpoint": "https://zlxsfnkuxrf3jdkc3zs7hyidi4.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+                    "endpoint": "https://a2zf74wzefhw5nhczrnb4fmq5a.appsync-api.ap-northeast-1.amazonaws.com/graphql",
                     "region": "ap-northeast-1",
                     "authorizationType": "API_KEY",
-                    "apiKey": "da2-ydunce67w5cmnplh6met523upy"
-                }
-            }
-        }
-    },
-    "auth": {
-        "plugins": {
-            "awsCognitoAuthPlugin": {
-                "UserAgent": "aws-amplify/cli",
-                "Version": "0.1.0",
-                "IdentityManager": {
-                    "Default": {}
-                },
-                "AppSync": {
-                    "Default": {
-                        "ApiUrl": "https://zlxsfnkuxrf3jdkc3zs7hyidi4.appsync-api.ap-northeast-1.amazonaws.com/graphql",
-                        "Region": "ap-northeast-1",
-                        "AuthMode": "API_KEY",
-                        "ApiKey": "da2-ydunce67w5cmnplh6met523upy",
-                        "ClientDatabasePrefix": "diaryapp_API_KEY"
-                    }
-                },
-                "CredentialsProvider": {
-                    "CognitoIdentity": {
-                        "Default": {
-                            "PoolId": "ap-northeast-1:44937aa9-6301-4de6-b9e1-3e19c1ff9eae",
-                            "Region": "ap-northeast-1"
-                        }
-                    }
-                },
-                "CognitoUserPool": {
-                    "Default": {
-                        "PoolId": "ap-northeast-1_dJRfDijCg",
-                        "AppClientId": "7nblogs2tafil4ur6apq11hiq0",
-                        "Region": "ap-northeast-1"
-                    }
-                },
-                "Auth": {
-                    "Default": {
-                        "authenticationFlowType": "USER_SRP_AUTH"
-                    }
+                    "apiKey": "da2-gz6x5rtwhjaz5elldbjjryxsle"
                 }
             }
         }
