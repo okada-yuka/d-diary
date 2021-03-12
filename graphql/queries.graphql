@@ -1,13 +1,26 @@
 # this is an auto generated file. This will be overwritten
-query GetBlog($id: ID!) {
-  getBlog(id: $id) {
+query GetUser($id: ID!) {
+  getUser(id: $id) {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -17,16 +30,19 @@ query GetBlog($id: ID!) {
     updatedAt
   }
 }
-query ListBlogs(
-  $filter: ModelBlogFilterInput
+query ListUsers(
+  $filter: ModelUserFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -35,15 +51,18 @@ query ListBlogs(
     nextToken
   }
 }
-query GetPost($id: ID!) {
-  getPost(id: $id) {
+query GetWeight($id: ID!) {
+  getWeight(id: $id) {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -53,22 +72,71 @@ query GetPost($id: ID!) {
     updatedAt
   }
 }
-query ListPosts(
-  $filter: ModelPostFilterInput
+query ListWeights(
+  $filter: ModelWeightFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listWeights(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      title
-      blogID
-      blog {
+      weight
+      userID
+      user {
         id
         name
         createdAt
         updatedAt
       }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetMeal($id: ID!) {
+  getMeal(id: $id) {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+query ListMeals(
+  $filter: ModelMealFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listMeals(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userID
+      user {
+        id
+        name
+        createdAt
+        updatedAt
+      }
+      timing
+      place
+      price
+      cal
       createdAt
       updatedAt
     }

@@ -1,12 +1,23 @@
-type Blog @model {
+type User @model {
   id: ID!
   name: String!
-  posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
+  weights: [Weight] @connection(keyName: "byUser", fields: ["id"])
+  meals: [Meal] @connection(keyName: "byUser", fields: ["id"])
 }
 
-type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+type Weight @model @key(name: "byUser", fields: ["userID"]) {
   id: ID!
-  title: String!
-  blogID: ID!
-  blog: Blog @connection(fields: ["blogID"])
+  weight: Int
+  userID: ID!
+  user: User @connection(fields: ["userID"])
+}
+
+type Meal @model @key(name: "byUser", fields: ["userID"]) {
+  id: ID!
+  userID: ID!
+  user: User @connection(fields: ["userID"])
+  timing: String!
+  place: String!
+  price: Int
+  cal: Int
 }

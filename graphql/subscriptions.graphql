@@ -1,13 +1,26 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateBlog {
-  onCreateBlog {
+subscription OnCreateUser {
+  onCreateUser {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -17,15 +30,28 @@ subscription OnCreateBlog {
     updatedAt
   }
 }
-subscription OnUpdateBlog {
-  onUpdateBlog {
+subscription OnUpdateUser {
+  onUpdateUser {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -35,15 +61,28 @@ subscription OnUpdateBlog {
     updatedAt
   }
 }
-subscription OnDeleteBlog {
-  onDeleteBlog {
+subscription OnDeleteUser {
+  onDeleteUser {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -53,15 +92,18 @@ subscription OnDeleteBlog {
     updatedAt
   }
 }
-subscription OnCreatePost {
-  onCreatePost {
+subscription OnCreateWeight {
+  onCreateWeight {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -71,15 +113,18 @@ subscription OnCreatePost {
     updatedAt
   }
 }
-subscription OnUpdatePost {
-  onUpdatePost {
+subscription OnUpdateWeight {
+  onUpdateWeight {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -89,20 +134,95 @@ subscription OnUpdatePost {
     updatedAt
   }
 }
-subscription OnDeletePost {
-  onDeletePost {
+subscription OnDeleteWeight {
+  onDeleteWeight {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
       updatedAt
     }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateMeal {
+  onCreateMeal {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateMeal {
+  onUpdateMeal {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteMeal {
+  onDeleteMeal {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
     createdAt
     updatedAt
   }

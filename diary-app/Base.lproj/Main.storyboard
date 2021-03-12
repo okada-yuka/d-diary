@@ -51,6 +51,32 @@
             </objects>
             <point key="canvasLocation" x="1767" y="788"/>
         </scene>
+        <!--Meal View Controller-->
+        <scene sceneID="p4T-iw-yEb">
+            <objects>
+                <viewController id="vtS-Bt-XdF" customClass="MealViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VVO-nQ-4Rk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-gK-8rj">
+                                <rect key="frame" x="184" y="490" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushDataToDynamo:" destination="vtS-Bt-XdF" eventType="touchUpInside" id="wkC-gf-AMG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gEK-3b-3wJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" image="flame" catalog="system" id="YMp-M5-ipy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CW0-ZC-Toq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="788"/>
+        </scene>
         <!--Title-->
         <scene sceneID="MDH-W5-sgX">
             <objects>
@@ -221,6 +247,7 @@
                         <segue destination="6KQ-du-RRg" kind="relationship" relationship="viewControllers" id="djF-aa-2rq"/>
                         <segue destination="uW4-zd-hg2" kind="relationship" relationship="viewControllers" id="f9v-es-abo"/>
                         <segue destination="BoN-Rd-TLy" kind="relationship" relationship="viewControllers" id="Arf-xZ-uMn"/>
+                        <segue destination="vtS-Bt-XdF" kind="relationship" relationship="viewControllers" id="LA5-Vn-3QH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ5-TN-ZY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,6 +257,7 @@
     </scenes>
     <resources>
         <image name="chart" width="128" height="128"/>
+        <image name="flame" catalog="system" width="108" height="128"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">

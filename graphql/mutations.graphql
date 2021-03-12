@@ -1,16 +1,29 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateBlog(
-  $input: CreateBlogInput!
-  $condition: ModelBlogConditionInput
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
 ) {
-  createBlog(input: $input, condition: $condition) {
+  createUser(input: $input, condition: $condition) {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -20,18 +33,31 @@ mutation CreateBlog(
     updatedAt
   }
 }
-mutation UpdateBlog(
-  $input: UpdateBlogInput!
-  $condition: ModelBlogConditionInput
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
 ) {
-  updateBlog(input: $input, condition: $condition) {
+  updateUser(input: $input, condition: $condition) {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -41,18 +67,31 @@ mutation UpdateBlog(
     updatedAt
   }
 }
-mutation DeleteBlog(
-  $input: DeleteBlogInput!
-  $condition: ModelBlogConditionInput
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
 ) {
-  deleteBlog(input: $input, condition: $condition) {
+  deleteUser(input: $input, condition: $condition) {
     id
     name
-    posts {
+    weights {
       items {
         id
-        title
-        blogID
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        userID
+        timing
+        place
+        price
+        cal
         createdAt
         updatedAt
       }
@@ -62,18 +101,21 @@ mutation DeleteBlog(
     updatedAt
   }
 }
-mutation CreatePost(
-  $input: CreatePostInput!
-  $condition: ModelPostConditionInput
+mutation CreateWeight(
+  $input: CreateWeightInput!
+  $condition: ModelWeightConditionInput
 ) {
-  createPost(input: $input, condition: $condition) {
+  createWeight(input: $input, condition: $condition) {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -83,18 +125,21 @@ mutation CreatePost(
     updatedAt
   }
 }
-mutation UpdatePost(
-  $input: UpdatePostInput!
-  $condition: ModelPostConditionInput
+mutation UpdateWeight(
+  $input: UpdateWeightInput!
+  $condition: ModelWeightConditionInput
 ) {
-  updatePost(input: $input, condition: $condition) {
+  updateWeight(input: $input, condition: $condition) {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
@@ -104,23 +149,107 @@ mutation UpdatePost(
     updatedAt
   }
 }
-mutation DeletePost(
-  $input: DeletePostInput!
-  $condition: ModelPostConditionInput
+mutation DeleteWeight(
+  $input: DeleteWeightInput!
+  $condition: ModelWeightConditionInput
 ) {
-  deletePost(input: $input, condition: $condition) {
+  deleteWeight(input: $input, condition: $condition) {
     id
-    title
-    blogID
-    blog {
+    weight
+    userID
+    user {
       id
       name
-      posts {
+      weights {
+        nextToken
+      }
+      meals {
         nextToken
       }
       createdAt
       updatedAt
     }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateMeal(
+  $input: CreateMealInput!
+  $condition: ModelMealConditionInput
+) {
+  createMeal(input: $input, condition: $condition) {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateMeal(
+  $input: UpdateMealInput!
+  $condition: ModelMealConditionInput
+) {
+  updateMeal(input: $input, condition: $condition) {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteMeal(
+  $input: DeleteMealInput!
+  $condition: ModelMealConditionInput
+) {
+  deleteMeal(input: $input, condition: $condition) {
+    id
+    userID
+    user {
+      id
+      name
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
     createdAt
     updatedAt
   }

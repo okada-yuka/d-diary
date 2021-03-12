@@ -27,11 +27,11 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateBlogInput(name: "House")
+        let mutationInput = CreateUserInput(name: "House")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: CreateBlogMutation(input: mutationInput)) { (result, error) in
+        appSyncClient?.perform(mutation: CreateUserMutation(input: mutationInput)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
             }
@@ -52,7 +52,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     func runQuery(){
         
         // 2回実行されてしまう（cachePolicyは消したら取得できなくなった）
-        appSyncClient?.fetch(query: ListBlogsQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        appSyncClient?.fetch(query: ListUsersQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
             if error != nil{
                 print(error?.localizedDescription ?? "")
                 return
@@ -60,7 +60,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
             print("データを取得（runQuery）")
             //print("Query complete.")
             // 取得したレコードのnameとdescriptionをコンソールに表示
-            result?.data?.listBlogs?.items!.forEach {
+            result?.data?.listUsers?.items!.forEach {
                 print(($0?.name)! + " \($0?.updatedAt)!")
             }
         }
@@ -72,11 +72,11 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     func subscribe() {
         
         do{
-            discard = try appSyncClient?.subscribe(subscription: OnCreateBlogSubscription(), resultHandler: {(result, transaction, error) in
+            discard = try appSyncClient?.subscribe(subscription: OnCreateUserSubscription(), resultHandler: {(result, transaction, error) in
                 if let result = result {
                     //print("CreateTodo subscription data:")
                     print("今追加されたデータを表示（subscribe）")
-                    print(result.data!.onCreateBlog!.name+" \(result.data!.onCreateBlog!.name)")
+                    print(result.data!.onCreateUser!.name+" \(result.data!.onCreateUser!.name)")
                 } else if let error = error {
                     print(error.localizedDescription)
                 }
