@@ -29,11 +29,11 @@ class WeightViewController: UIViewController {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateTodoInput(place: "MONOMONO cafe", price: 1200)
+        let mutationInput = CreatePostInput(title: "Weight", blogId: "1")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { (result, error) in
+        appSyncClient?.perform(mutation: CreatePostMutation(input: mutationInput)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
             }
@@ -47,10 +47,11 @@ class WeightViewController: UIViewController {
             //print("Mutation complete.")
             //self.runQuery()
         }
+        
     }
     
     @IBAction func pushDataToDynamo(_ sender: Any) {
-        
+        runMutation()
     }
     
     /*
