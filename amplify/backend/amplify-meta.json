@@ -35,8 +35,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-diaryapp-dev-140716-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apidiaryapp"
       },
-      "lastPushTimeStamp": "2021-03-11T05:13:00.227Z",
-      "lastPushDirHash": "Ufx6zLJ8cloNM6Oc4nFk+TPQBUM="
+      "lastPushTimeStamp": "2021-03-12T04:22:20.371Z",
+      "lastPushDirHash": "y1rPg0B8Y1+EAGkAoBI9W7jp9k8="
     }
   }
 }

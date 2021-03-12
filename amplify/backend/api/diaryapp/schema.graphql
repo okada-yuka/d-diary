@@ -4,3 +4,9 @@ type Todo @model {
   price: Int
 }
 
+type Weight @model {
+  id: ID!
+  weight: Int!
+}
+
+

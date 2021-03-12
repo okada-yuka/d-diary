@@ -31,6 +31,16 @@
                     <view key="view" contentMode="scaleToFill" id="zOV-Je-aZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-LW-LMV">
+                                <rect key="frame" x="125" y="475" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dynamoにデータを追加"/>
+                                <connections>
+                                    <action selector="pushDataToDynamo:" destination="BoN-Rd-TLy" eventType="touchUpInside" id="9h4-ic-aZO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bnk-9w-iSp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
