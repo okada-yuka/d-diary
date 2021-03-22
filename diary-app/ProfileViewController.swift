@@ -17,34 +17,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     
+    var delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        usernameLabel.text = "User Name"
+        usernameLabel.text = delegate.username
         
-        fetchDynamoDBTableName()
 
     }
 
-    private func fetchDynamoDBTableName() {
-            let dynamoDB = AWSDynamoDB.default()
-            let listTableInput = AWSDynamoDBListTablesInput()
-            dynamoDB.listTables(listTableInput!).continueWith { (task:AWSTask<AWSDynamoDBListTablesOutput>) -> Any? in
-                if let error = task.error as? NSError {
-                print("Error occurred: \(error)")
-                    return nil
-                }
-
-                let listTablesOutput = task.result
-
-                for tableName in listTablesOutput!.tableNames! {
-                    print("\(tableName)")
-                }
-
-                return nil
-            }
-        }
     
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定

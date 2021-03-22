@@ -10,9 +10,11 @@ import AWSDynamoDB
 import AWSAppSync
 import AWSMobileClient
 
-class Only1stViewController: UIViewController {
+class Only1stViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
+    
+    var delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var appSyncClient: AWSAppSyncClient?
     
@@ -26,6 +28,19 @@ class Only1stViewController: UIViewController {
         
         // NavigationBarを表示しない
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        usernameTextField.delegate = self
+    }
+    
+    // textField以外をタップしてキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        usernameTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        usernameTextField.resignFirstResponder()
+        return true
     }
     
     @IBAction func pushBackButton(_ sender: Any) {
@@ -33,6 +48,9 @@ class Only1stViewController: UIViewController {
     }
     
     @IBAction func pushDecideButton(_ sender: Any) {
+        usernameTextField.endEditing(true)
+        // TextFieldから文字を取得
+        delegate.username = usernameTextField.text!
         runMutation()
     }
     
@@ -40,7 +58,7 @@ class Only1stViewController: UIViewController {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(name: "yokada")
+        let mutationInput = CreateUserInput(name: delegate.username)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -55,8 +73,7 @@ class Only1stViewController: UIViewController {
             }
             
             print("データを追加（runMutation）")
-            //print("Mutation complete.")
-            //self.runQuery()
+
         }
         
     }
