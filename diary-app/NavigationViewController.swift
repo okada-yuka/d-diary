@@ -26,6 +26,18 @@ class NavigationViewController: UINavigationController {
         ]
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 初回ログイン時のみusernameViewControllerを開くための設定
+        let ud = UserDefaults.standard
+        let firstLunchKey = "firstLunch"
+        if ud.bool(forKey: firstLunchKey) {
+            ud.set(false, forKey: firstLunchKey)
+            ud.synchronize()
+            self.performSegue(withIdentifier: "toOnly1st", sender: nil)
+        }
+    }
 
     /*
     // MARK: - Navigation

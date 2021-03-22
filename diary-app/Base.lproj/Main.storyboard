@@ -18,11 +18,43 @@
                     </navigationBar>
                     <connections>
                         <segue destination="fFp-Bg-FjQ" kind="relationship" relationship="rootViewController" id="AnB-EU-6Xn"/>
+                        <segue destination="xmL-bd-nlP" kind="show" identifier="toOnly1st" id="pQj-V7-nV8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saI-7P-GfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-140" y="83"/>
+        </scene>
+        <!--Only 1st View Controller-->
+        <scene sceneID="mWj-s8-Kew">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="xmL-bd-nlP" customClass="Only1stViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lO-tY-tuf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLj-AM-4SP">
+                                <rect key="frame" x="176" y="480" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="To Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushBackButton:" destination="xmL-bd-nlP" eventType="touchUpInside" id="gal-nE-Tml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w3Z-Z6-tDO"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ioB-bv-UE9"/>
+                    <connections>
+                        <segue destination="fFp-Bg-FjQ" kind="presentation" identifier="toHome" id="OKy-Xb-BIl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e77-P0-0d6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.02898550724638" y="794.86607142857144"/>
         </scene>
         <!--Weight View Controller-->
         <scene sceneID="ftR-lX-eLP">
@@ -80,7 +112,7 @@
         <!--Title-->
         <scene sceneID="MDH-W5-sgX">
             <objects>
-                <viewController id="6KQ-du-RRg" customClass="GoalViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="6KQ-du-RRg" customClass="GoalViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLl-aH-mD4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +240,7 @@
         <!--Push Button-->
         <scene sceneID="WzB-I3-YiA">
             <objects>
-                <viewController id="Yye-er-aQz" customClass="NextViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Yye-er-aQz" customClass="NextViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57p-4w-30O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +266,7 @@
         <!--Tab View Controller-->
         <scene sceneID="vS4-PO-xEl">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fFp-Bg-FjQ" customClass="TabViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fFp-Bg-FjQ" customClass="TabViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kfn-cN-Kzx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iyQ-uq-LbM">
@@ -252,9 +284,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ5-TN-ZY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711.59420289855075" y="81.696428571428569"/>
+            <point key="canvasLocation" x="703" y="82"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OKy-Xb-BIl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chart" width="128" height="128"/>
         <image name="flame" catalog="system" width="108" height="128"/>
@@ -265,6 +300,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

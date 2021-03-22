@@ -16,5 +16,13 @@
         }
       }
     }
+  },
+  "auth": {
+    "diaryapp00817d4d": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
   }
 }
