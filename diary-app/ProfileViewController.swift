@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("username" + delegate.username)
         usernameLabel.text = delegate.username
         
 
