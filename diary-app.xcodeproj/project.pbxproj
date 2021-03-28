@@ -10,7 +10,7 @@
 		1704B19FBCC755598E5C360E /* Pods_diary_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553961076B68DE7C4128D88 /* Pods_diary_app.framework */; };
 		4E62CFEFE16643E288C92E2B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 71E20DD1CD44432980EA162F /* awsconfiguration.json */; };
 		B25041BBCED3410ABB04EEA7 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F22B4853184D3385EF7C64 /* amplifyconfiguration.json */; };
-		C100612F2610CF37008B2710 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100612E2610CF37008B2710 /* API.swift */; };
+		C10061322610D074008B2710 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10061312610D074008B2710 /* API.swift */; };
 		C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127C52025F669AE004C6FA8 /* NextViewController.swift */; };
 		C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B74AE25FBAECE00932952 /* MealViewController.swift */; };
 		C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */; };
@@ -34,7 +34,7 @@
 		71E20DD1CD44432980EA162F /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		A3F22B4853184D3385EF7C64 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		A553961076B68DE7C4128D88 /* Pods_diary_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diary_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C100612E2610CF37008B2710 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = "/Users/yokada/M1/diary-app/diary-app/API.swift"; sourceTree = "<absolute>"; };
+		C10061312610D074008B2710 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../Desktop/API.swift; sourceTree = "<group>"; };
 		C127C52025F669AE004C6FA8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		C12B74AE25FBAECE00932952 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			children = (
 				C16FFAD625F46B7D00423DCA /* AppDelegate.swift */,
 				C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */,
-				C100612E2610CF37008B2710 /* API.swift */,
+				C10061312610D074008B2710 /* API.swift */,
 				C16FFADA25F46B7D00423DCA /* GoalViewController.swift */,
 				C16FFADC25F46B7D00423DCA /* Main.storyboard */,
 				C16FFADF25F46B7F00423DCA /* Assets.xcassets */,
@@ -250,9 +250,9 @@
 				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,
 				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
 				C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */,
+				C10061322610D074008B2710 /* API.swift in Sources */,
 				C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */,
 				C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */,
-				C100612F2610CF37008B2710 /* API.swift in Sources */,
 				C1E514DB2608D9A400A99CB4 /* Only1stViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
