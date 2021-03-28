@@ -10,6 +10,9 @@ import AWSMobileClient
 
 class TabViewController: UITabBarController {
 
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         
         
@@ -59,7 +62,7 @@ class TabViewController: UITabBarController {
              }else{
                 if let attributesDict = attributes{
                     print(attributesDict["sub"])
-                    
+                    self.appDelegate.subID = attributesDict["sub"]!
                 }
              }
         }

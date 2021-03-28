@@ -13,13 +13,44 @@ import AWSAppSync
 class MealViewController: UIViewController {
 
     var appSyncClient: AWSAppSyncClient?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var calValue: UILabel!
+    @IBOutlet weak var priceValue: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // NavigationBarのTitleを設定
+        self.parent?.navigationItem.title = "食事を記録する"
+        
+    }
+    
+    @IBAction func priceValue(_ sender: UISlider) {
+        let price: Int = Int(sender.value)
+        priceValue.text = String(price)
+    }
+    
+    @IBAction func calValue(_ sender: UISlider) {
+        let cal: Int = Int(sender.value)
+        calValue.text = String(cal)
+    }
+    
+    @IBAction func pushGetDate(_ sender: Any) {
+        // DatePickerで日付のみ取得（String）
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        let selectedDate = dateFormatter.string(from: datePicker.date)
+        print(appDelegate.subID)
+        print(selectedDate)
     }
     
     /*

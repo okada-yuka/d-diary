@@ -25,6 +25,12 @@ class WeightViewController: UIViewController {
         //fetchDynamoDBData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // NavigationBarのTitleを設定
+        self.parent?.navigationItem.title = "体重を記録する"
+        
+    }
+    
     /*
     // DynamoDBにデータを追加する
     func runMutation(){
