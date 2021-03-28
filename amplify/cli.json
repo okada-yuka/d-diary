@@ -5,7 +5,8 @@
       "validatetypenamereservedwords": true,
       "useexperimentalpipelinedtransformer": false,
       "enableiterativegsiupdates": false,
-      "secondarykeyasgsi": true
+      "secondarykeyasgsi": true,
+      "skipoverridemutationinputtypes": true
     },
     "frontend-ios": {
       "enablexcodeintegration": true

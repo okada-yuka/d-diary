@@ -23,11 +23,12 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
 
     }
     
+    /*
     // DynamoDBにデータを追加する
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(name: "House")
+        let mutationInput = CreateUserInput(name: "test-2", star: 41, goal: "冷蔵庫を買う")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -76,7 +77,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
                 if let result = result {
                     //print("CreateTodo subscription data:")
                     print("今追加されたデータを表示（subscribe）")
-                    print(result.data!.onCreateUser!.name+" \(result.data!.onCreateUser!.name)")
+                    print(result.data!.onCreateUser!.name+" \(result.data!.onCreateUser!.star)")
                 } else if let error = error {
                     print(error.localizedDescription)
                 }
@@ -113,6 +114,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         subscribe()
     }
     
+    */
     @IBAction func pushNextButton(_ sender: Any) {
         self.performSegue(withIdentifier: "toSecond", sender: nil)
     }
@@ -160,5 +162,6 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
                 }
         */
     }
+    
     
 }

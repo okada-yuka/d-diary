@@ -21,6 +21,8 @@ class MealViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
     }
+    
+    /*
     // DynamoDBにデータを追加する
     func runMutation(){
         print("push")
@@ -50,7 +52,7 @@ class MealViewController: UIViewController {
         print("push")
         runMutation()
     }
-    
+    */
     /*
     // MARK: - Navigation
 

@@ -11,12 +11,17 @@ import AWSMobileClient
 class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
         // TabBarのアイコンの色（選択時）を設定
         UITabBar.appearance().tintColor = Pallet.light_blue
         // TabBarの背景色を設定
         UITabBar.appearance().barTintColor = Pallet.bg_light_blue
+        
+        
+        
         
         // Do any additional setup after loading the view.
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
@@ -31,16 +36,35 @@ class TabViewController: UITabBarController {
                         if (error == nil){ //サインイン成功時
                             DispatchQueue.main.async {
                                 print("Sign In")
+                                
                             }
                         }
                     })
                 default:
                     AWSMobileClient.sharedInstance().signOut()
                 }
+                
+                
+                
+ 
             } else if let error = error {
                 print(error.localizedDescription)
             }
         }
+        
+        
+        AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
+             if(error != nil){
+                print("ERROR: \(error)")
+             }else{
+                if let attributesDict = attributes{
+                    print(attributesDict["sub"])
+                    
+                }
+             }
+        }
+ 
+        
     }
     
 

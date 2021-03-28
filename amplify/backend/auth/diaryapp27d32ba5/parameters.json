@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "diaryapp00817d4d_identitypool_00817d4d",
+    "identityPoolName": "diaryapp27d32ba5_identitypool_27d32ba5",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "diarya00817d4d",
-    "userPoolName": "diaryapp00817d4d_userpool_00817d4d",
+    "resourceNameTruncated": "diarya27d32ba5",
+    "userPoolName": "diaryapp27d32ba5_userpool_27d32ba5",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "diarya00817d4d_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "diarya27d32ba5_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "00817d4d",
-    "resourceName": "diaryapp00817d4d",
+    "sharedId": "27d32ba5",
+    "resourceName": "diaryapp27d32ba5",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -46,6 +46,9 @@
         ]
     },
     "useDefault": "default",
+    "usernameAttributes": [
+        "email"
+    ],
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

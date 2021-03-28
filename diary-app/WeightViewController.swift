@@ -25,6 +25,7 @@ class WeightViewController: UIViewController {
         //fetchDynamoDBData()
     }
     
+    /*
     // DynamoDBにデータを追加する
     func runMutation(){
         
@@ -53,7 +54,7 @@ class WeightViewController: UIViewController {
     @IBAction func pushDataToDynamo(_ sender: Any) {
         runMutation()
     }
-    
+    */
     /*
 
     private func fetchDynamoDBData() {

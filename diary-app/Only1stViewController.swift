@@ -9,6 +9,7 @@ import UIKit
 import AWSDynamoDB
 import AWSAppSync
 import AWSMobileClient
+import AWSCore
 
 class Only1stViewController: UIViewController, UITextFieldDelegate {
 
@@ -30,6 +31,25 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         usernameTextField.delegate = self
+        
+        
+        // IDプールのIDを取得する
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "IDENTITY_POOL_ID")
+//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
+//
+//        // Retrieve your Amazon Cognito ID
+//        credentialsProvider.getIdentityId().continueWith(block: { (task) -> AnyObject? in
+//            if (task.error != nil) {
+//                print("Error: " + task.error!.localizedDescription)
+//            }
+//            else {
+//                // the task result will contain the identity id
+//                let cognitoId = task.result!
+//                print("Cognito id: \(cognitoId)")
+//            }
+//            return task;
+//        })
     }
     
     // textField以外をタップしてキーボードを閉じる
@@ -47,6 +67,8 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "toHome", sender: nil)
     }
     
+    
+    /*
     @IBAction func pushDecideButton(_ sender: Any) {
         usernameTextField.endEditing(true)
         // TextFieldから文字を取得
@@ -54,11 +76,12 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
         runMutation()
     }
     
+
     // DynamoDBにデータを追加する
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(name: delegate.username)
+        let mutationInput = CreateUserInput(name: "test", star: 0, goal: "")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -77,6 +100,10 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+ 
+    */
+    
     
     /*
     // MARK: - Navigation
