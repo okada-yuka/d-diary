@@ -15,14 +15,13 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
-    var delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var appSyncClient: AWSAppSyncClient?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
         
         // Do any additional setup after loading the view.
@@ -68,11 +67,11 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    /*
+    
     @IBAction func pushDecideButton(_ sender: Any) {
         usernameTextField.endEditing(true)
         // TextFieldから文字を取得
-        delegate.username = usernameTextField.text!
+        appDelegate.username = usernameTextField.text!
         runMutation()
     }
     
@@ -81,7 +80,7 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(name: "test", star: 0, goal: "")
+        let mutationInput = CreateUserInput(id: "test-id", name:"test", star: 0, goal: "財布")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -102,7 +101,7 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
     }
     
  
-    */
+    
     
     
     /*
