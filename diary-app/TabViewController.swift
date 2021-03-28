@@ -39,9 +39,9 @@ class TabViewController: UITabBarController {
                         if (error == nil){ //サインイン成功時
                             DispatchQueue.main.async {
                                 print("Sign In")
-                                
                             }
                         }
+
                     })
                 default:
                     AWSMobileClient.sharedInstance().signOut()
@@ -55,12 +55,13 @@ class TabViewController: UITabBarController {
             }
         }
         
-        
+        // SignInし直した場合，実行されないためどこかで更新が必要
         AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
              if(error != nil){
                 print("ERROR: \(error)")
              }else{
                 if let attributesDict = attributes{
+                    print("subIDを表示します〜！")
                     print(attributesDict["sub"])
                     self.appDelegate.subID = attributesDict["sub"]!
                 }

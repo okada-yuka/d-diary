@@ -49,16 +49,31 @@ class MealViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
+        
+        // SignInし直していた時用にsubIDを更新
+        AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
+             if(error != nil){
+                print("ERROR: \(error)")
+             }else{
+                if let attributesDict = attributes{
+                    print("subIDを表示します〜！")
+                    print(attributesDict["sub"])
+                    self.appDelegate.subID = attributesDict["sub"]!
+                }
+             }
+        }
+        
+        
         print(appDelegate.subID)
         print(selectedDate)
     }
     
-    /*
+    
     // DynamoDBにデータを追加する
     func runMutation(){
         print("push")
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateMealInput(userId: "5", timing: "lunch", place: "DEAN & DELUCA", price: 1200, cal: 5)
+        let mutationInput = CreateMealInput(createdBy: self.appDelegate.subID, userId: self.appDelegate.subID, timing: "lunch", place: "MONOMONO", price: 2000, cal: 3)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -83,7 +98,7 @@ class MealViewController: UIViewController {
         print("push")
         runMutation()
     }
-    */
+    
     /*
     // MARK: - Navigation
 

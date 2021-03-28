@@ -1,6 +1,447 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:graphql"
+      name = "graphql">
+      <FileRef
+         location = "group:subscriptions.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:queries.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:mutations.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:schema.json">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:/Users/yokada/M1/diary-app/diary-app/API.swift">
+   </FileRef>
+   <Group
+      location = "group:amplify"
+      name = "amplify">
+      <Group
+         location = "group:#current-cloud-backend"
+         name = "#current-cloud-backend">
+         <FileRef
+            location = "group:backend-config.json">
+         </FileRef>
+         <Group
+            location = "group:auth"
+            name = "auth">
+            <Group
+               location = "group:diaryapp27d32ba5"
+               name = "diaryapp27d32ba5">
+               <FileRef
+                  location = "group:parameters.json">
+               </FileRef>
+               <FileRef
+                  location = "group:diaryapp27d32ba5-cloudformation-template.yml">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:api"
+            name = "api">
+            <Group
+               location = "group:diaryapp"
+               name = "diaryapp">
+               <Group
+                  location = "group:stacks"
+                  name = "stacks">
+                  <FileRef
+                     location = "group:CustomResources.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:parameters.json">
+               </FileRef>
+               <FileRef
+                  location = "group:schema.graphql">
+               </FileRef>
+               <Group
+                  location = "group:build"
+                  name = "build">
+                  <Group
+                     location = "group:stacks"
+                     name = "stacks">
+                     <FileRef
+                        location = "group:Weight.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:CustomResources.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ConnectionStack.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:parameters.json">
+                  </FileRef>
+                  <FileRef
+                     location = "group:schema.graphql">
+                  </FileRef>
+                  <Group
+                     location = "group:resolvers"
+                     name = "resolvers">
+                     <FileRef
+                        location = "group:Mutation.updateUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Weight.user.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.user.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listUsers.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listUsers.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.user.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Weight.user.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listMeals.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.weights.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.weights.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listMeals.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.meals.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.meals.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listWeights.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listWeights.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createMeal.req.vtl">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:cloudformation-template.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:transform.conf.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:tags.json">
+         </FileRef>
+         <FileRef
+            location = "group:amplify-meta.json">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:cli.json">
+      </FileRef>
+      <Group
+         location = "group:backend"
+         name = "backend">
+         <FileRef
+            location = "group:backend-config.json">
+         </FileRef>
+         <Group
+            location = "group:auth"
+            name = "auth">
+            <Group
+               location = "group:diaryapp27d32ba5"
+               name = "diaryapp27d32ba5">
+               <FileRef
+                  location = "group:parameters.json">
+               </FileRef>
+               <FileRef
+                  location = "group:diaryapp27d32ba5-cloudformation-template.yml">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:awscloudformation"
+            name = "awscloudformation">
+            <FileRef
+               location = "group:nested-cloudformation-stack.yml">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:api"
+            name = "api">
+            <Group
+               location = "group:diaryapp"
+               name = "diaryapp">
+               <Group
+                  location = "group:stacks"
+                  name = "stacks">
+                  <FileRef
+                     location = "group:CustomResources.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:parameters.json">
+               </FileRef>
+               <FileRef
+                  location = "group:schema.graphql">
+               </FileRef>
+               <Group
+                  location = "group:build"
+                  name = "build">
+                  <Group
+                     location = "group:stacks"
+                     name = "stacks">
+                     <FileRef
+                        location = "group:Weight.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:CustomResources.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ConnectionStack.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:parameters.json">
+                  </FileRef>
+                  <FileRef
+                     location = "group:schema.graphql">
+                  </FileRef>
+                  <Group
+                     location = "group:resolvers"
+                     name = "resolvers">
+                     <FileRef
+                        location = "group:Mutation.updateUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Weight.user.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.user.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listUsers.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listUsers.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Meal.user.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Weight.user.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listMeals.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.weights.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.weights.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listMeals.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.meals.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:User.meals.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateWeight.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getUser.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.getUser.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.updateWeight.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listWeights.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteMeal.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.deleteMeal.res.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Query.listWeights.req.vtl">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mutation.createMeal.req.vtl">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:cloudformation-template.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:transform.conf.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:tags.json">
+         </FileRef>
+         <FileRef
+            location = "group:amplify-meta.json">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <FileRef
+         location = "group:team-provider-info.json">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:diary-app.xcodeproj">
    </FileRef>

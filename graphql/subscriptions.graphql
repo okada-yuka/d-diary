@@ -1,0 +1,265 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateUser {
+  onCreateUser {
+    id
+    name
+    star
+    goal
+    weights {
+      items {
+        id
+        createdBy
+        day
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        createdBy
+        userID
+        timing
+        place
+        price
+        cal
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUser {
+  onUpdateUser {
+    id
+    name
+    star
+    goal
+    weights {
+      items {
+        id
+        createdBy
+        day
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        createdBy
+        userID
+        timing
+        place
+        price
+        cal
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUser {
+  onDeleteUser {
+    id
+    name
+    star
+    goal
+    weights {
+      items {
+        id
+        createdBy
+        day
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        createdBy
+        userID
+        timing
+        place
+        price
+        cal
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateWeight {
+  onCreateWeight {
+    id
+    createdBy
+    day
+    weight
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateWeight {
+  onUpdateWeight {
+    id
+    createdBy
+    day
+    weight
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteWeight {
+  onDeleteWeight {
+    id
+    createdBy
+    day
+    weight
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateMeal {
+  onCreateMeal {
+    id
+    createdBy
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateMeal {
+  onUpdateMeal {
+    id
+    createdBy
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteMeal {
+  onDeleteMeal {
+    id
+    createdBy
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}

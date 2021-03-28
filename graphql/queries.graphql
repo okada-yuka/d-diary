@@ -1,0 +1,166 @@
+# this is an auto generated file. This will be overwritten
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    name
+    star
+    goal
+    weights {
+      items {
+        id
+        createdBy
+        day
+        weight
+        userID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    meals {
+      items {
+        id
+        createdBy
+        userID
+        timing
+        place
+        price
+        cal
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetWeight($id: ID!) {
+  getWeight(id: $id) {
+    id
+    createdBy
+    day
+    weight
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListWeights(
+  $filter: ModelWeightFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWeights(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      createdBy
+      day
+      weight
+      userID
+      user {
+        id
+        name
+        star
+        goal
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetMeal($id: ID!) {
+  getMeal(id: $id) {
+    id
+    createdBy
+    userID
+    user {
+      id
+      name
+      star
+      goal
+      weights {
+        nextToken
+      }
+      meals {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    timing
+    place
+    price
+    cal
+    createdAt
+    updatedAt
+  }
+}
+query ListMeals(
+  $filter: ModelMealFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listMeals(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      createdBy
+      userID
+      user {
+        id
+        name
+        star
+        goal
+        createdAt
+        updatedAt
+      }
+      timing
+      place
+      price
+      cal
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
