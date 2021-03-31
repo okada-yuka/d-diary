@@ -21,13 +21,22 @@ class NextViewController: UIViewController {
         AWSMobileClient.sharedInstance().signOut()
 
         // サインイン画面を表示
-        AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (userState, error) in
-            if(error == nil){       //Successful signin
-                DispatchQueue.main.async {
-                    print("Sign In")
-                }
+        AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (signInState, error) in
+            if let signInState = signInState {
+                print("Sign in flow completed: \(signInState)")
+            } else if let error = error {
+                print("error logging in: \(error.localizedDescription)")
             }
         })
+        
+        // これでサインイン画面を表示するとエラーが出るようになった
+//        AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (userState, error) in
+//            if(error == nil){       //Successful signin
+//                DispatchQueue.main.async {
+//                    print("Sign In")
+//                }
+//            }
+//        })
     }
     
     /*

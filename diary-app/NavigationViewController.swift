@@ -37,6 +37,7 @@ class NavigationViewController: UINavigationController {
             ud.synchronize()
             self.performSegue(withIdentifier: "toOnly1st", sender: nil)
         }
+        
     }
 
     /*

@@ -51,6 +51,21 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
 //        })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // subIDを念のため再度取得する
+        AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
+             if(error != nil){
+                print("ERROR: \(error)")
+             }else{
+                if let attributesDict = attributes{
+                    print("subIDを表示します〜！")
+                    print(attributesDict["sub"])
+                    self.appDelegate.subID = attributesDict["sub"]!
+                }
+             }
+        }
+    }
+    
     // textField以外をタップしてキーボードを閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         usernameTextField.resignFirstResponder()
@@ -79,8 +94,8 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
     // DynamoDBにデータを追加する
     func runMutation(){
         
-        // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(id: "test-id", name:"test", star: 0, goal: "財布")
+        // CreateInput関数：入力パラメータを作成
+        let mutationInput = CreateUserInput(id: self.appDelegate.subID, name: appDelegate.username, star: 0, goal: "k")
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
