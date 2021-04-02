@@ -18,7 +18,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="fFp-Bg-FjQ" kind="relationship" relationship="rootViewController" id="AnB-EU-6Xn"/>
-                        <segue destination="xmL-bd-nlP" kind="show" identifier="toOnly1st" id="pQj-V7-nV8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saI-7P-GfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,7 +72,6 @@
                     <navigationItem key="navigationItem" id="ioB-bv-UE9"/>
                     <connections>
                         <outlet property="usernameTextField" destination="rkN-5y-ZEF" id="wVL-OR-tyb"/>
-                        <segue destination="fFp-Bg-FjQ" kind="presentation" identifier="toHome" id="OKy-Xb-BIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e77-P0-0d6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -456,9 +454,6 @@
             <point key="canvasLocation" x="703" y="82"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="OKy-Xb-BIl"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="chart" width="128" height="128"/>
         <image name="flame" catalog="system" width="108" height="128"/>

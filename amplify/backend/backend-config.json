@@ -1,12 +1,4 @@
 {
-  "auth": {
-    "diaryapp27d32ba5": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
-  },
   "api": {
     "diaryapp": {
       "service": "AppSync",
@@ -16,13 +8,21 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 28,
+              "apiKeyExpirationDays": 30,
               "description": "diaryapp's API key"
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
+    }
+  },
+  "auth": {
+    "diaryapp6b34f8db": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
     }
   }
 }

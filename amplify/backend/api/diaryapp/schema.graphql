@@ -1,6 +1,6 @@
-type User @model {
+type User @model @key(fields: ["username"]){
  id: String
- name: String!
+ username: String!
  star: Int!
  goal: String!
  weights: [Weight] @connection(keyName: "byUser", fields: ["id"])

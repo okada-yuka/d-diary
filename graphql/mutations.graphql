@@ -5,7 +5,7 @@ mutation CreateUser(
 ) {
   createUser(input: $input, condition: $condition) {
     id
-    name
+    username
     star
     goal
     weights {
@@ -44,7 +44,7 @@ mutation UpdateUser(
 ) {
   updateUser(input: $input, condition: $condition) {
     id
-    name
+    username
     star
     goal
     weights {
@@ -83,7 +83,7 @@ mutation DeleteUser(
 ) {
   deleteUser(input: $input, condition: $condition) {
     id
-    name
+    username
     star
     goal
     weights {
@@ -128,7 +128,7 @@ mutation CreateWeight(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -156,7 +156,7 @@ mutation UpdateWeight(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -184,7 +184,7 @@ mutation DeleteWeight(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -210,7 +210,7 @@ mutation CreateMeal(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -240,7 +240,7 @@ mutation UpdateMeal(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -270,7 +270,7 @@ mutation DeleteMeal(
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
