@@ -2,7 +2,7 @@
 subscription OnCreateUser {
   onCreateUser {
     id
-    name
+    username
     star
     goal
     weights {
@@ -38,7 +38,7 @@ subscription OnCreateUser {
 subscription OnUpdateUser {
   onUpdateUser {
     id
-    name
+    username
     star
     goal
     weights {
@@ -74,7 +74,7 @@ subscription OnUpdateUser {
 subscription OnDeleteUser {
   onDeleteUser {
     id
-    name
+    username
     star
     goal
     weights {
@@ -116,7 +116,7 @@ subscription OnCreateWeight {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -141,7 +141,7 @@ subscription OnUpdateWeight {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -166,7 +166,7 @@ subscription OnDeleteWeight {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -189,7 +189,7 @@ subscription OnCreateMeal {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -216,7 +216,7 @@ subscription OnUpdateMeal {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -243,7 +243,7 @@ subscription OnDeleteMeal {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {

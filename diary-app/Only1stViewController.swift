@@ -95,7 +95,7 @@ class Only1stViewController: UIViewController, UITextFieldDelegate {
     func runMutation(){
         
         // CreateInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(id: self.appDelegate.subID, name: appDelegate.username, star: 0, goal: "k")
+        let mutationInput = CreateUserInput(id: <#T##String?#>, username: <#T##String#>, star: <#T##Int#>, goal: <#T##String#>)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する

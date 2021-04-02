@@ -2,22 +2,6 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:graphql"
-      name = "graphql">
-      <FileRef
-         location = "group:subscriptions.graphql">
-      </FileRef>
-      <FileRef
-         location = "group:queries.graphql">
-      </FileRef>
-      <FileRef
-         location = "group:mutations.graphql">
-      </FileRef>
-      <FileRef
-         location = "group:schema.json">
-      </FileRef>
-   </Group>
-   <Group
       location = "group:amplify"
       name = "amplify">
       <Group
@@ -26,20 +10,6 @@
          <FileRef
             location = "group:backend-config.json">
          </FileRef>
-         <Group
-            location = "group:auth"
-            name = "auth">
-            <Group
-               location = "group:diaryapp27d32ba5"
-               name = "diaryapp27d32ba5">
-               <FileRef
-                  location = "group:parameters.json">
-               </FileRef>
-               <FileRef
-                  location = "group:diaryapp27d32ba5-cloudformation-template.yml">
-               </FileRef>
-            </Group>
-         </Group>
          <Group
             location = "group:api"
             name = "api">
@@ -59,6 +29,10 @@
                <FileRef
                   location = "group:schema.graphql">
                </FileRef>
+               <Group
+                  location = "group:resolvers"
+                  name = "resolvers">
+               </Group>
                <Group
                   location = "group:build"
                   name = "build">
@@ -204,6 +178,14 @@
                      <FileRef
                         location = "group:Mutation.createMeal.req.vtl">
                      </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:pipelineFunctions"
+                     name = "pipelineFunctions">
+                  </Group>
+                  <Group
+                     location = "group:functions"
+                     name = "functions">
                   </Group>
                   <FileRef
                      location = "group:cloudformation-template.json">
@@ -231,20 +213,6 @@
             location = "group:backend-config.json">
          </FileRef>
          <Group
-            location = "group:auth"
-            name = "auth">
-            <Group
-               location = "group:diaryapp27d32ba5"
-               name = "diaryapp27d32ba5">
-               <FileRef
-                  location = "group:parameters.json">
-               </FileRef>
-               <FileRef
-                  location = "group:diaryapp27d32ba5-cloudformation-template.yml">
-               </FileRef>
-            </Group>
-         </Group>
-         <Group
             location = "group:awscloudformation"
             name = "awscloudformation">
             <FileRef
@@ -270,6 +238,10 @@
                <FileRef
                   location = "group:schema.graphql">
                </FileRef>
+               <Group
+                  location = "group:resolvers"
+                  name = "resolvers">
+               </Group>
                <Group
                   location = "group:build"
                   name = "build">
@@ -416,6 +388,14 @@
                         location = "group:Mutation.createMeal.req.vtl">
                      </FileRef>
                   </Group>
+                  <Group
+                     location = "group:pipelineFunctions"
+                     name = "pipelineFunctions">
+                  </Group>
+                  <Group
+                     location = "group:functions"
+                     name = "functions">
+                  </Group>
                   <FileRef
                      location = "group:cloudformation-template.json">
                   </FileRef>
@@ -437,6 +417,22 @@
       </FileRef>
       <FileRef
          location = "group:team-provider-info.json">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:graphql"
+      name = "graphql">
+      <FileRef
+         location = "group:subscriptions.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:queries.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:mutations.graphql">
+      </FileRef>
+      <FileRef
+         location = "group:schema.json">
       </FileRef>
    </Group>
    <FileRef

@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1704B19FBCC755598E5C360E /* Pods_diary_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553961076B68DE7C4128D88 /* Pods_diary_app.framework */; };
-		4E62CFEFE16643E288C92E2B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 71E20DD1CD44432980EA162F /* awsconfiguration.json */; };
-		B25041BBCED3410ABB04EEA7 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F22B4853184D3385EF7C64 /* amplifyconfiguration.json */; };
-		C10061322610D074008B2710 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10061312610D074008B2710 /* API.swift */; };
+		9F92BB28BA8343CA9410A6A2 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EA10633A4E47BC1278EA /* awsconfiguration.json */; };
+		B6C2A18D6F0B46908D63DF7F /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D872A8F1AD42BC98F13F96 /* amplifyconfiguration.json */; };
 		C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127C52025F669AE004C6FA8 /* NextViewController.swift */; };
 		C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B74AE25FBAECE00932952 /* MealViewController.swift */; };
 		C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */; };
@@ -22,19 +21,18 @@
 		C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */; };
 		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
 		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
-		C1E514DB2608D9A400A99CB4 /* Only1stViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E514DA2608D9A400A99CB4 /* Only1stViewController.swift */; };
+		C1E4141A26178C4000CC3B03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4141926178C4000CC3B03 /* API.swift */; };
 		C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ECD68725F68A4C00C0BAC2 /* Constants.swift */; };
 		C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FABA8625F52B5800F4C991 /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A84EA10633A4E47BC1278EA /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
 		3A7262DFA84B38BF9427E06C /* Pods-diary-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diary-app.release.xcconfig"; path = "Target Support Files/Pods-diary-app/Pods-diary-app.release.xcconfig"; sourceTree = "<group>"; };
+		49D872A8F1AD42BC98F13F96 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		4DCCD6EBCB87380AD6271EDB /* Pods-diary-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diary-app.debug.xcconfig"; path = "Target Support Files/Pods-diary-app/Pods-diary-app.debug.xcconfig"; sourceTree = "<group>"; };
 		715D8EB683F64AA793621645 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
-		71E20DD1CD44432980EA162F /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		A3F22B4853184D3385EF7C64 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		A553961076B68DE7C4128D88 /* Pods_diary_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diary_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10061312610D074008B2710 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../Desktop/API.swift; sourceTree = "<group>"; };
 		C127C52025F669AE004C6FA8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		C12B74AE25FBAECE00932952 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		C16FFAE425F46B7F00423DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		C1E514DA2608D9A400A99CB4 /* Only1stViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Only1stViewController.swift; sourceTree = "<group>"; };
+		C1E4141926178C4000CC3B03 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		C1ECD68725F68A4C00C0BAC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C1FABA8625F52B5800F4C991 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +75,8 @@
 		C16FFACA25F46B7D00423DCA = {
 			isa = PBXGroup;
 			children = (
+				C58E9D99034647C2BA2991BF /* AmplifyConfig */,
 				715D8EB683F64AA793621645 /* amplifytools.xcconfig */,
-				A3F22B4853184D3385EF7C64 /* amplifyconfiguration.json */,
-				71E20DD1CD44432980EA162F /* awsconfiguration.json */,
 				C16FFAD525F46B7D00423DCA /* diary-app */,
 				C16FFAD425F46B7D00423DCA /* Products */,
 				9DAA44B711FE7D8AC135C20C /* Pods */,
@@ -100,8 +97,8 @@
 			children = (
 				C16FFAD625F46B7D00423DCA /* AppDelegate.swift */,
 				C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */,
-				C10061312610D074008B2710 /* API.swift */,
 				C16FFADA25F46B7D00423DCA /* GoalViewController.swift */,
+				C1E4141926178C4000CC3B03 /* API.swift */,
 				C16FFADC25F46B7D00423DCA /* Main.storyboard */,
 				C16FFADF25F46B7F00423DCA /* Assets.xcassets */,
 				C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */,
@@ -113,9 +110,18 @@
 				C1ECD68725F68A4C00C0BAC2 /* Constants.swift */,
 				C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */,
 				C12B74AE25FBAECE00932952 /* MealViewController.swift */,
-				C1E514DA2608D9A400A99CB4 /* Only1stViewController.swift */,
 			);
 			path = "diary-app";
+			sourceTree = "<group>";
+		};
+		C58E9D99034647C2BA2991BF /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				49D872A8F1AD42BC98F13F96 /* amplifyconfiguration.json */,
+				2A84EA10633A4E47BC1278EA /* awsconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CC42422CE577AE8CF6B2B34D /* Frameworks */ = {
@@ -188,8 +194,8 @@
 				C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */,
 				C16FFAE025F46B7F00423DCA /* Assets.xcassets in Resources */,
 				C16FFADE25F46B7D00423DCA /* Main.storyboard in Resources */,
-				B25041BBCED3410ABB04EEA7 /* amplifyconfiguration.json in Resources */,
-				4E62CFEFE16643E288C92E2B /* awsconfiguration.json in Resources */,
+				B6C2A18D6F0B46908D63DF7F /* amplifyconfiguration.json in Resources */,
+				9F92BB28BA8343CA9410A6A2 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E4141A26178C4000CC3B03 /* API.swift in Sources */,
 				C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */,
 				C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */,
 				C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */,
@@ -250,10 +257,8 @@
 				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,
 				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
 				C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */,
-				C10061322610D074008B2710 /* API.swift in Sources */,
 				C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */,
 				C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */,
-				C1E514DB2608D9A400A99CB4 /* Only1stViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

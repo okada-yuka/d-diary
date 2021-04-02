@@ -11,7 +11,7 @@ def lambda_handler(event, context):
 
     print('success')
     dynamoDB = boto3.resource("dynamodb")
-    table = dynamoDB.Table("User") # DynamoDBのテーブル名
+    table = dynamoDB.Table("User-lcy2imcsnnbrdoarmpv4ndhdsy-dev") # DynamoDBのテーブル名
 
     # DynamoDBへのPut処理実行
     table.put_item(

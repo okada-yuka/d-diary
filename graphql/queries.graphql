@@ -1,8 +1,8 @@
 # this is an auto generated file. This will be overwritten
-query GetUser($id: ID!) {
-  getUser(id: $id) {
+query GetUser($username: String!) {
+  getUser(username: $username) {
     id
-    name
+    username
     star
     goal
     weights {
@@ -36,14 +36,22 @@ query GetUser($id: ID!) {
   }
 }
 query ListUsers(
+  $username: String
   $filter: ModelUserFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listUsers(
+    username: $username
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
       id
-      name
+      username
       star
       goal
       weights {
@@ -67,7 +75,7 @@ query GetWeight($id: ID!) {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -97,7 +105,7 @@ query ListWeights(
       userID
       user {
         id
-        name
+        username
         star
         goal
         createdAt
@@ -116,7 +124,7 @@ query GetMeal($id: ID!) {
     userID
     user {
       id
-      name
+      username
       star
       goal
       weights {
@@ -148,7 +156,7 @@ query ListMeals(
       userID
       user {
         id
-        name
+        username
         star
         goal
         createdAt
