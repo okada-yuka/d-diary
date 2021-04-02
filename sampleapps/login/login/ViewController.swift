@@ -35,6 +35,7 @@ class ViewController: UIViewController {
                     })
                 default:
                     AWSMobileClient.sharedInstance().signOut()
+                    print("ログイン済み")
                 }
                 
                 
@@ -47,6 +48,19 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func pushLogOutButton(_ sender: Any) {
+        // サインアウト処理
+        AWSMobileClient.sharedInstance().signOut()
 
+        // サインイン画面を表示
+        AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (signInState, error) in
+            if let signInState = signInState {
+                print("Sign in flow completed: \(signInState)")
+            } else if let error = error {
+                print("error logging in: \(error.localizedDescription)")
+            }
+        })
+    }
+    
 }
 
