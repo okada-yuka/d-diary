@@ -11,14 +11,14 @@ def lambda_handler(event, context):
 
     print('success')
     dynamoDB = boto3.resource("dynamodb")
-    table = dynamoDB.Table("table-name") # DynamoDBのテーブル名
+    table = dynamoDB.Table("User") # DynamoDBのテーブル名
 
     # DynamoDBへのPut処理実行
     table.put_item(
       Item = {
-        "PartitionKey": event['userName'], # Partition Keyのデータ
-        "SortKey": event['triggerSource'], # Sort Keyのデータ
-        "OtherKey": event['userPoolId']  # その他のデータ
+        "username": event['userName'], 
+        "goal": "未設定",
+        "star": 0
       }
     )
 
