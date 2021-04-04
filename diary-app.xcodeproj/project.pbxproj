@@ -13,6 +13,7 @@
 		C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127C52025F669AE004C6FA8 /* NextViewController.swift */; };
 		C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B74AE25FBAECE00932952 /* MealViewController.swift */; };
 		C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */; };
+		C1670C5F2619A6D600C7F7F3 /* PostWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1670C5E2619A6D600C7F7F3 /* PostWeightViewController.swift */; };
 		C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD625F46B7D00423DCA /* AppDelegate.swift */; };
 		C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */; };
 		C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16FFADA25F46B7D00423DCA /* GoalViewController.swift */; };
@@ -36,6 +37,7 @@
 		C127C52025F669AE004C6FA8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		C12B74AE25FBAECE00932952 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		C1670C5E2619A6D600C7F7F3 /* PostWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWeightViewController.swift; sourceTree = "<group>"; };
 		C16FFAD325F46B7D00423DCA /* diary-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "diary-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16FFAD625F46B7D00423DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C16FFAD825F46B7D00423DCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				C16FFADA25F46B7D00423DCA /* GoalViewController.swift */,
 				C1E4141926178C4000CC3B03 /* API.swift */,
 				C16FFADC25F46B7D00423DCA /* Main.storyboard */,
+				C1670C5E2619A6D600C7F7F3 /* PostWeightViewController.swift */,
 				C16FFADF25F46B7F00423DCA /* Assets.xcassets */,
 				C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */,
 				C16FFAE425F46B7F00423DCA /* Info.plist */,
@@ -258,6 +261,7 @@
 				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
 				C16FFAD925F46B7D00423DCA /* SceneDelegate.swift in Sources */,
 				C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */,
+				C1670C5F2619A6D600C7F7F3 /* PostWeightViewController.swift in Sources */,
 				C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
