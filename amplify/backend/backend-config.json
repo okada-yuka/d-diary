@@ -1,4 +1,12 @@
 {
+  "auth": {
+    "diaryappec2cf080": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
   "api": {
     "diaryapp": {
       "service": "AppSync",
@@ -15,14 +23,6 @@
           "additionalAuthenticationProviders": []
         }
       }
-    }
-  },
-  "auth": {
-    "diaryapp6b34f8db": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
     }
   }
 }

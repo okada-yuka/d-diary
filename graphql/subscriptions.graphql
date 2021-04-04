@@ -11,7 +11,6 @@ subscription OnCreateUser {
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -21,7 +20,6 @@ subscription OnCreateUser {
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -47,7 +45,6 @@ subscription OnUpdateUser {
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -57,7 +54,6 @@ subscription OnUpdateUser {
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -83,7 +79,6 @@ subscription OnDeleteUser {
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -93,7 +88,6 @@ subscription OnDeleteUser {
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -111,9 +105,6 @@ subscription OnCreateWeight {
   onCreateWeight {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -128,6 +119,8 @@ subscription OnCreateWeight {
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -136,9 +129,6 @@ subscription OnUpdateWeight {
   onUpdateWeight {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -153,6 +143,8 @@ subscription OnUpdateWeight {
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -161,9 +153,6 @@ subscription OnDeleteWeight {
   onDeleteWeight {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -178,6 +167,8 @@ subscription OnDeleteWeight {
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -186,7 +177,6 @@ subscription OnCreateMeal {
   onCreateMeal {
     id
     createdBy
-    userID
     user {
       id
       username
@@ -213,7 +203,6 @@ subscription OnUpdateMeal {
   onUpdateMeal {
     id
     createdBy
-    userID
     user {
       id
       username
@@ -240,7 +229,6 @@ subscription OnDeleteMeal {
   onDeleteMeal {
     id
     createdBy
-    userID
     user {
       id
       username

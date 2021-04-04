@@ -12,11 +12,21 @@ import AWSDynamoDB
 
 class PostWeightViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var weightLabel: UILabel!
+    
+    
     var appSyncClient: AWSAppSyncClient?
+    
+    // DynamoDBに格納するデータ
+    var weight: Int = 0
+    var date: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+            
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
         // Do any additional setup after loading the view.
@@ -27,7 +37,7 @@ class PostWeightViewController: UIViewController {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateWeightInput(weight: 50, userId: "3")
+        let mutationInput = CreateWeightInput(createdBy: "test-user", day: date, weight: weight)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -48,7 +58,22 @@ class PostWeightViewController: UIViewController {
         
     }
     
+    @IBAction func getWeightValue(_ sender: UISlider) {
+        
+        let weightValue: Int = Int(sender.value)
+        weightLabel.text = String(weightValue)
+        weight = weightValue
+        
+    }
+    
     @IBAction func pushDataToDynamo(_ sender: Any) {
+        
+        // DatePickerで日付のみ取得（String）
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        date = dateFormatter.string(from: datePicker.date)
+        
         runMutation()
     }
     
