@@ -1,4 +1,5 @@
 import boto3
+import uuid
 
 
 def lambda_handler(event, context):   
@@ -16,6 +17,7 @@ def lambda_handler(event, context):
     # DynamoDBへのPut処理実行
     table.put_item(
       Item = {
+        "id": str(uuid.uuid4()),
         "username": event['userName'], 
         "goal": "未設定",
         "star": 0
