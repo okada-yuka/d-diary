@@ -14,7 +14,6 @@ mutation CreateUser(
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -24,7 +23,6 @@ mutation CreateUser(
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -53,7 +51,6 @@ mutation UpdateUser(
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -63,7 +60,6 @@ mutation UpdateUser(
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -92,7 +88,6 @@ mutation DeleteUser(
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -102,7 +97,6 @@ mutation DeleteUser(
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -123,9 +117,6 @@ mutation CreateWeight(
   createWeight(input: $input, condition: $condition) {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -140,6 +131,8 @@ mutation CreateWeight(
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -151,9 +144,6 @@ mutation UpdateWeight(
   updateWeight(input: $input, condition: $condition) {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -168,6 +158,8 @@ mutation UpdateWeight(
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -179,9 +171,6 @@ mutation DeleteWeight(
   deleteWeight(input: $input, condition: $condition) {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -196,6 +185,8 @@ mutation DeleteWeight(
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -207,7 +198,6 @@ mutation CreateMeal(
   createMeal(input: $input, condition: $condition) {
     id
     createdBy
-    userID
     user {
       id
       username
@@ -237,7 +227,6 @@ mutation UpdateMeal(
   updateMeal(input: $input, condition: $condition) {
     id
     createdBy
-    userID
     user {
       id
       username
@@ -267,7 +256,6 @@ mutation DeleteMeal(
   deleteMeal(input: $input, condition: $condition) {
     id
     createdBy
-    userID
     user {
       id
       username

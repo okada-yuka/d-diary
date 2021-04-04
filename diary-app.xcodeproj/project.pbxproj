@@ -135,6 +135,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		142E1E1A022A45348380011A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = undefined;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */

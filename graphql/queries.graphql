@@ -1,6 +1,6 @@
 # this is an auto generated file. This will be overwritten
-query GetUser($username: String!) {
-  getUser(username: $username) {
+query GetUser($id: String!) {
+  getUser(id: $id) {
     id
     username
     star
@@ -11,7 +11,6 @@ query GetUser($username: String!) {
         createdBy
         day
         weight
-        userID
         createdAt
         updatedAt
       }
@@ -21,7 +20,6 @@ query GetUser($username: String!) {
       items {
         id
         createdBy
-        userID
         timing
         place
         price
@@ -36,14 +34,14 @@ query GetUser($username: String!) {
   }
 }
 query ListUsers(
-  $username: String
+  $id: String
   $filter: ModelUserFilterInput
   $limit: Int
   $nextToken: String
   $sortDirection: ModelSortDirection
 ) {
   listUsers(
-    username: $username
+    id: $id
     filter: $filter
     limit: $limit
     nextToken: $nextToken
@@ -70,9 +68,6 @@ query GetWeight($id: ID!) {
   getWeight(id: $id) {
     id
     createdBy
-    day
-    weight
-    userID
     user {
       id
       username
@@ -87,6 +82,8 @@ query GetWeight($id: ID!) {
       createdAt
       updatedAt
     }
+    day
+    weight
     createdAt
     updatedAt
   }
@@ -100,9 +97,6 @@ query ListWeights(
     items {
       id
       createdBy
-      day
-      weight
-      userID
       user {
         id
         username
@@ -111,6 +105,8 @@ query ListWeights(
         createdAt
         updatedAt
       }
+      day
+      weight
       createdAt
       updatedAt
     }
@@ -121,7 +117,6 @@ query GetMeal($id: ID!) {
   getMeal(id: $id) {
     id
     createdBy
-    userID
     user {
       id
       username
@@ -153,7 +148,6 @@ query ListMeals(
     items {
       id
       createdBy
-      userID
       user {
         id
         username

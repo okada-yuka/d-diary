@@ -1,26 +1,24 @@
-type User @model @key(fields: ["username"]){
- id: String
+type User @model @key(fields: ["id"]){
+ id: String!
  username: String!
  star: Int!
- goal: String!
+ goal: String
  weights: [Weight] @connection(keyName: "byUser", fields: ["id"])
  meals: [Meal] @connection(keyName: "byUser", fields: ["id"])
 }
-type Weight @model @key(name: "byUser", fields: ["userID"]) {
+type Weight @model @key(name: "byUser", fields: ["createdBy"]) {
  id: ID!
- createdBy: String
- day: String
- weight: Int
- userID: String
- user: User @connection(fields: ["userID"])
+ createdBy: String!
+ user: User @connection(fields: ["createdBy"])
+ day: String!
+ weight: Int!
 }
-type Meal @model @key(name: "byUser", fields: ["userID"]) {
+type Meal @model @key(name: "byUser", fields: ["createdBy"]) {
  id: ID!
- createdBy: String
- userID: String
- user: User @connection(fields: ["userID"])
+ createdBy: String!
+ user: User @connection(fields: ["createdBy"])
  timing: String!
- place: String!
- price: Int!
- cal: Int
+ place: String
+ price: Int
+ cal: Int!
 }

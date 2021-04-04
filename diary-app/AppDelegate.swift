@@ -72,12 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initializing appsync client. \(error)")
         }
         
-        
-        // 初回ログイン時のみusernameViewControllerを開くための設定
-        let ud = UserDefaults.standard
-        let firstLunchKey = "firstLunch"
-        let firstLunch = [firstLunchKey: true]
-        ud.register(defaults: firstLunch)
+
         
         
         return true
