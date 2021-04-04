@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:/Users/yokada/M1/diary-app/diary-app/API.swift">
+   </FileRef>
    <Group
       location = "group:amplify"
       name = "amplify">
