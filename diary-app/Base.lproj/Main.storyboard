@@ -50,6 +50,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-aV-nTG">
+                                                <rect key="frame" x="124" y="339" width="166" height="96"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.32923412320000001" green="0.68904668089999999" blue="0.7086095214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="体重を記録する">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pushPostWeightButton:" destination="BoN-Rd-TLy" eventType="touchUpInside" id="fZG-Rb-dYR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -83,10 +94,40 @@
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="chart" systemItem="mostViewed" id="INE-pI-PTI"/>
                     <navigationItem key="navigationItem" id="zvf-aE-Lpo"/>
+                    <connections>
+                        <segue destination="fm0-x0-fMd" kind="show" identifier="toPostWeight" id="Ygc-UO-0Ql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlK-IV-p1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1766.6666666666667" y="787.5"/>
+        </scene>
+        <!--Post Weight View Controller-->
+        <scene sceneID="S3X-aF-CBL">
+            <objects>
+                <viewController id="fm0-x0-fMd" customClass="PostWeightViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ceY-XT-fbF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KR-Tu-A8Q">
+                                <rect key="frame" x="256" y="725" width="116" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="投稿"/>
+                                <connections>
+                                    <action selector="pushDataToDynamo:" destination="fm0-x0-fMd" eventType="touchUpInside" id="soU-pk-wea"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jai-1X-0x4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k4U-zy-ocL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJ0-fv-GC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.6666666666667" y="1516.7410714285713"/>
         </scene>
         <!--Meal View Controller-->
         <scene sceneID="p4T-iw-yEb">

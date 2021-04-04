@@ -30,37 +30,12 @@ class WeightViewController: UIViewController {
         self.parent?.navigationItem.title = "体重を記録する"
         
     }
-    
-    /*
-    // DynamoDBにデータを追加する
-    func runMutation(){
-        
-        // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateWeightInput(weight: 50, userId: "3")
-        
-        // CreateTodoMutation関数：
-        // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: CreateWeightMutation(input: mutationInput)) { (result, error) in
-            if let error = error as? AWSAppSyncClientError {
-                print("Error occurred: \(error.localizedDescription )")
-            }
-            
-            if let resultError = result?.errors{
-                print("Error saving the item on server: \(resultError)")
-                return
-            }
-            
-            print("データを追加（runMutation）")
-            //print("Mutation complete.")
-            //self.runQuery()
-        }
-        
+
+
+    @IBAction func pushPostWeightButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toPostWeight", sender: nil)
     }
-    
-    @IBAction func pushDataToDynamo(_ sender: Any) {
-        runMutation()
-    }
-    */
+
     /*
 
     private func fetchDynamoDBData() {
