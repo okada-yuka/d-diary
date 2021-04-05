@@ -50,19 +50,6 @@ class MealViewController: UIViewController {
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
         
-        // SignInし直していた時用にsubIDを更新
-        AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
-             if(error != nil){
-                print("ERROR: \(error)")
-             }else{
-                if let attributesDict = attributes{
-                    print("subIDを表示します〜！")
-                    print(attributesDict["sub"])
-                    self.appDelegate.subID = attributesDict["sub"]!
-                }
-             }
-        }
-        
         
         print(appDelegate.subID)
         print(selectedDate)
