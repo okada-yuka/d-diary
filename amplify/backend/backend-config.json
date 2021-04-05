@@ -1,6 +1,6 @@
 {
   "auth": {
-    "diaryappec2cf080": {
+    "diaryappd337e2e7": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

@@ -31,24 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = AWSServiceConfiguration(region: AWSRegionType.APNortheast1,credentialsProvider: provider)
 
         AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
-        
-
-            // Initialize the AWS AppSync configuration
-            /*
-            let databaseURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("database_name")
-
-            do {
-                //AppSync configuration & client initialization
-                let appSyncServiceConfig = try AWSAppSyncServiceConfig()
-                let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: appSyncServiceConfig, databaseURL: databaseURL)
-                appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
-                // Set id as the cache key for objects. See architecture section for details
-                appSyncClient?.apolloClient?.cacheKeyForObject = { $0["id"] }
-            } catch {
-                print("Error initializing appsync client. \(error)")
-            }
-            */
 
         
         do {

@@ -28,6 +28,9 @@ class TabViewController: UITabBarController {
         
         // Do any additional setup after loading the view.
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
+            print("usernameを表示")
+            print(AWSMobileClient.default().username)
+            
             if let userState = UserState {
                 switch (UserState) {
                 case .signedIn:
@@ -39,7 +42,9 @@ class TabViewController: UITabBarController {
                         if (error == nil){ //サインイン成功時
                             DispatchQueue.main.async {
                                 print("Sign In")
+                                
                             }
+
                         }
 
                     })
@@ -47,13 +52,13 @@ class TabViewController: UITabBarController {
                     AWSMobileClient.sharedInstance().signOut()
                 }
                 
-                
-                
  
             } else if let error = error {
                 print(error.localizedDescription)
             }
         }
+        
+
         
         // SignInし直した場合，実行されないためどこかで更新が必要
         AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
@@ -61,9 +66,8 @@ class TabViewController: UITabBarController {
                 print("ERROR: \(error)")
              }else{
                 if let attributesDict = attributes{
-                    print("subIDを表示します〜！")
-                    print(attributesDict["sub"])
-                    self.appDelegate.subID = attributesDict["sub"]!
+                    print("Attributeを表示")
+                    print(attributesDict["User name"])
                 }
              }
         }
