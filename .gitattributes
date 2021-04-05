@@ -1,1 +1,2 @@
-python-modules/* linguist-vendored
+python-modules/* linguist-documentation
+nodejs-modules/* linguist-documentation
