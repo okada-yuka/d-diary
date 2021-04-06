@@ -358,6 +358,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goal_bg" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-C9-gUH">
+                                <rect key="frame" x="-5" y="66" width="414" height="699"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FId-7T-pSi">
                                 <rect key="frame" x="171" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -532,11 +536,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YXQ-f8-fIO"/>
         <segue reference="55U-uN-7cP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="deskclock.fill" catalog="system" width="128" height="124"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
+        <image name="goal_bg" width="390" height="844"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
