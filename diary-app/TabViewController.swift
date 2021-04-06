@@ -25,7 +25,6 @@ class TabViewController: UITabBarController {
         
         
         
-        
         // Do any additional setup after loading the view.
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
             
@@ -57,18 +56,6 @@ class TabViewController: UITabBarController {
         }
         
 
-        
-        // SignInし直した場合，実行されないためどこかで更新が必要
-        AWSMobileClient.default().getUserAttributes { (attributes, error) in
-             if(error != nil){
-                print("ERROR: \(error)")
-             }else{
-                if let attributesDict = attributes{
-                    print("Attributeを表示")
-                    print(attributesDict)
-                }
-             }
-        }
     }
     
 
@@ -77,15 +64,5 @@ class TabViewController: UITabBarController {
         appDelegate.username = AWSMobileClient.default().username
         print(appDelegate.username)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
