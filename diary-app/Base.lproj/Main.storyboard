@@ -499,6 +499,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Push Button" id="Qs3-Q8-ZtL"/>
+                    <connections>
+                        <segue destination="6KQ-du-RRg" kind="show" identifier="toGoal" id="55U-uN-7cP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLF-Qe-w6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,6 +531,9 @@
             <point key="canvasLocation" x="703" y="82"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="55U-uN-7cP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="deskclock.fill" catalog="system" width="128" height="124"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>

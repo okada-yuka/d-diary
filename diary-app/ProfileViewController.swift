@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     
-    var delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
         self.parent?.navigationItem.title = "プロフィール"
-        
+        usernameLabel.text = appDelegate.username
     }
     
     /*
