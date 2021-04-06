@@ -8,6 +8,7 @@ query GetUser($id: String!) {
     weights {
       items {
         id
+        weightId
         createdBy
         day
         weight
@@ -19,6 +20,7 @@ query GetUser($id: String!) {
     meals {
       items {
         id
+        mealId
         createdBy
         timing
         place
@@ -67,6 +69,7 @@ query ListUsers(
 query GetWeight($id: ID!) {
   getWeight(id: $id) {
     id
+    weightId
     createdBy
     user {
       id
@@ -96,6 +99,7 @@ query ListWeights(
   listWeights(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
+      weightId
       createdBy
       user {
         id
@@ -116,6 +120,7 @@ query ListWeights(
 query GetMeal($id: ID!) {
   getMeal(id: $id) {
     id
+    mealId
     createdBy
     user {
       id
@@ -147,6 +152,7 @@ query ListMeals(
   listMeals(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
+      mealId
       createdBy
       user {
         id

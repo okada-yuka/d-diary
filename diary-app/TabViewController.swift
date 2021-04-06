@@ -33,13 +33,14 @@ class TabViewController: UITabBarController {
                 case .signedIn:
                     DispatchQueue.main.async {
                         print("Logged In")
+                        self.appDelegate.username = AWSMobileClient.default().username
                     }
                 case .signedOut:
                     AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (UserState, error) in
                         if (error == nil){ //サインイン成功時
                             DispatchQueue.main.async {
                                 print("Sign In")
-                                
+                                self.appDelegate.username = AWSMobileClient.default().username
                             }
 
                         }
@@ -57,12 +58,6 @@ class TabViewController: UITabBarController {
         
 
     }
-    
 
-    // GoalViewを表示するたびに更新する
-    override func viewWillAppear(_ animated: Bool) {
-        appDelegate.username = AWSMobileClient.default().username
-        print(appDelegate.username)
-    }
 
 }

@@ -57,7 +57,7 @@ class MealViewController: UIViewController {
     func runMutation(){
         print("push")
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateMealInput(createdBy: "test-user", timing: "lunch", place: "Home", price: 1000, cal: 5)
+        let mutationInput = CreateMealInput(mealId: "test", createdBy: "appDelegate.username", timing: "lunch", cal: 2)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する

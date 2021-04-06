@@ -10,6 +10,8 @@ import AWSMobileClient
 
 class NextViewController: UIViewController {
 
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +31,22 @@ class NextViewController: UIViewController {
             
             if let signInState = signInState {
                 print("SignInしました")
+                self.appDelegate.username = AWSMobileClient.default().username
             } else if let error = error {
                 print("error logging in: \(error.localizedDescription)")
             }
         })
     
         
+    }
+    
+    // ログイン、再ログイン時に実行する関数（username、star、goal等を更新）
+    func update_signIn(){
+        // usernameの更新（cognito）
+        appDelegate.username = AWSMobileClient.default().username
+        print(appDelegate.username)
+        
+        // starとgoalの更新（DynamoDB）
     }
     
     /*

@@ -8,6 +8,7 @@ subscription OnCreateUser {
     weights {
       items {
         id
+        weightId
         createdBy
         day
         weight
@@ -19,6 +20,7 @@ subscription OnCreateUser {
     meals {
       items {
         id
+        mealId
         createdBy
         timing
         place
@@ -42,6 +44,7 @@ subscription OnUpdateUser {
     weights {
       items {
         id
+        weightId
         createdBy
         day
         weight
@@ -53,6 +56,7 @@ subscription OnUpdateUser {
     meals {
       items {
         id
+        mealId
         createdBy
         timing
         place
@@ -76,6 +80,7 @@ subscription OnDeleteUser {
     weights {
       items {
         id
+        weightId
         createdBy
         day
         weight
@@ -87,6 +92,7 @@ subscription OnDeleteUser {
     meals {
       items {
         id
+        mealId
         createdBy
         timing
         place
@@ -104,6 +110,7 @@ subscription OnDeleteUser {
 subscription OnCreateWeight {
   onCreateWeight {
     id
+    weightId
     createdBy
     user {
       id
@@ -128,6 +135,7 @@ subscription OnCreateWeight {
 subscription OnUpdateWeight {
   onUpdateWeight {
     id
+    weightId
     createdBy
     user {
       id
@@ -152,6 +160,7 @@ subscription OnUpdateWeight {
 subscription OnDeleteWeight {
   onDeleteWeight {
     id
+    weightId
     createdBy
     user {
       id
@@ -176,6 +185,7 @@ subscription OnDeleteWeight {
 subscription OnCreateMeal {
   onCreateMeal {
     id
+    mealId
     createdBy
     user {
       id
@@ -202,6 +212,7 @@ subscription OnCreateMeal {
 subscription OnUpdateMeal {
   onUpdateMeal {
     id
+    mealId
     createdBy
     user {
       id
@@ -228,6 +239,7 @@ subscription OnUpdateMeal {
 subscription OnDeleteMeal {
   onDeleteMeal {
     id
+    mealId
     createdBy
     user {
       id

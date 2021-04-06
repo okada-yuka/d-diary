@@ -7,14 +7,14 @@ type User @model @key(fields: ["id"]){
  meals: [Meal] @connection(keyName: "byUser", fields: ["id"])
 }
 type Weight @model @key(name: "byUser", fields: ["createdBy"]) {
- id: ID!
+ weightId: ID!
  createdBy: String!
  user: User @connection(fields: ["createdBy"])
  day: String!
  weight: Int!
 }
 type Meal @model @key(name: "byUser", fields: ["createdBy"]) {
- id: ID!
+ mealId: ID!
  createdBy: String!
  user: User @connection(fields: ["createdBy"])
  timing: String!

@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "diaryappd337e2e7_identitypool_d337e2e7",
+    "identityPoolName": "diaryapp804b80e3_identitypool_804b80e3",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "diaryad337e2e7",
-    "userPoolName": "diaryappd337e2e7_userpool_d337e2e7",
+    "resourceNameTruncated": "diarya804b80e3",
+    "userPoolName": "diaryapp804b80e3_userpool_804b80e3",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "diaryad337e2e7_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "diarya804b80e3_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "d337e2e7",
-    "resourceName": "diaryappd337e2e7",
+    "sharedId": "804b80e3",
+    "resourceName": "diaryapp804b80e3",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

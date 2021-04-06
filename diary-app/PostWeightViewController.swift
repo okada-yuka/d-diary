@@ -15,7 +15,7 @@ class PostWeightViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var weightLabel: UILabel!
     
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var appSyncClient: AWSAppSyncClient?
     
     // DynamoDBに格納するデータ
@@ -25,11 +25,9 @@ class PostWeightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-            
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
         // Do any additional setup after loading the view.
+        
     }
     
 
@@ -37,11 +35,12 @@ class PostWeightViewController: UIViewController {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateWeightInput(createdBy: "test-user", day: date, weight: weight)
-        
+        let mutationInput = CreateWeightInput(weightId: "test", createdBy: appDelegate.username, day: "date", weight: 2)
+
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
         appSyncClient?.perform(mutation: CreateWeightMutation(input: mutationInput)) { (result, error) in
+
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
             }
@@ -52,8 +51,7 @@ class PostWeightViewController: UIViewController {
             }
             
             print("データを追加（runMutation）")
-            //print("Mutation complete.")
-            //self.runQuery()
+
         }
         
     }
@@ -67,7 +65,7 @@ class PostWeightViewController: UIViewController {
     }
     
     @IBAction func pushDataToDynamo(_ sender: Any) {
-        
+
         // DatePickerで日付のみ取得（String）
         datePicker.datePickerMode = UIDatePicker.Mode.date
         let dateFormatter = DateFormatter()
@@ -77,14 +75,4 @@ class PostWeightViewController: UIViewController {
         runMutation()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

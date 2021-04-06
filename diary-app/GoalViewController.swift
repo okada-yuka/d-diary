@@ -13,12 +13,13 @@ import AWSAppSync
 class GoalViewController: UIViewController, UINavigationControllerDelegate {
 
     var appSyncClient: AWSAppSyncClient?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
         appSyncClient = appDelegate.appSyncClient
 
     }
@@ -29,12 +30,12 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         
     }
     
-    /*
+    
     // DynamoDBにデータを追加する
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(name: "test-2", star: 41, goal: "冷蔵庫を買う")
+        let mutationInput = CreateUserInput(id: "test", username: "appDelegate.username", star: 2)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
@@ -44,6 +45,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
             }
             
             if let resultError = result?.errors{
+                // すでに同じusernameが登録されている場合、このエラーになる
                 print("Error saving the item on server: \(resultError)")
                 return
             }
@@ -54,7 +56,7 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         }
  
     }
-    
+    /*
     // DynamoDBからデータを取得
     func runQuery(){
         
@@ -104,12 +106,13 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         // 背景色を設定
         view.backgroundColor = Pallet.bg_light_blue
     }
+    */
     
     // DynamoDBにデータを追加する
     @IBAction func pushDataToDynamo(_ sender: Any) {
         runMutation()
     }
-    
+    /*
     // DyanmoDBからデータを取得する
     @IBAction func getDynamoData(_ sender: Any) {
         runQuery()
