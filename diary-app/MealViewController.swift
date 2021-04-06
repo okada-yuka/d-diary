@@ -49,9 +49,6 @@ class MealViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
-        
-        
-        print(appDelegate.subID)
         print(selectedDate)
     }
     

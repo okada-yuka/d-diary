@@ -28,8 +28,6 @@ class TabViewController: UITabBarController {
         
         // Do any additional setup after loading the view.
         AWSMobileClient.sharedInstance().initialize { (UserState, error) in
-            print("usernameを表示")
-            print(AWSMobileClient.default().username)
             
             if let userState = UserState {
                 switch (UserState) {
@@ -61,20 +59,24 @@ class TabViewController: UITabBarController {
 
         
         // SignInし直した場合，実行されないためどこかで更新が必要
-        AWSMobileClient.sharedInstance().getUserAttributes { (attributes, error) in
+        AWSMobileClient.default().getUserAttributes { (attributes, error) in
              if(error != nil){
                 print("ERROR: \(error)")
              }else{
                 if let attributesDict = attributes{
                     print("Attributeを表示")
-                    print(attributesDict["User name"])
+                    print(attributesDict)
                 }
              }
         }
- 
-        
     }
     
+
+    // GoalViewを表示するたびに更新する
+    override func viewWillAppear(_ animated: Bool) {
+        appDelegate.username = AWSMobileClient.default().username
+        print(appDelegate.username)
+    }
 
     /*
     // MARK: - Navigation
