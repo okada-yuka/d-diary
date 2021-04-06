@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-140" y="83"/>
         </scene>
-        <!--Weight View Controller-->
+        <!--Weight-->
         <scene sceneID="ftR-lX-eLP">
             <objects>
                 <viewController id="BoN-Rd-TLy" customClass="WeightViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                             <constraint firstItem="lyT-kD-CaL" firstAttribute="centerX" secondItem="zOV-Je-aZV" secondAttribute="centerX" id="Yyk-PA-YGN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="chart" systemItem="mostViewed" id="INE-pI-PTI"/>
+                    <tabBarItem key="tabBarItem" title="Weight" image="deskclock.fill" catalog="system" selectedImage="deskclock.fill" id="INE-pI-PTI"/>
                     <navigationItem key="navigationItem" id="zvf-aE-Lpo"/>
                     <connections>
                         <segue destination="fm0-x0-fMd" kind="show" identifier="toPostWeight" id="Ygc-UO-0Ql"/>
@@ -151,7 +151,7 @@
             </objects>
             <point key="canvasLocation" x="1766.6666666666667" y="1516.7410714285713"/>
         </scene>
-        <!--Meal View Controller-->
+        <!--Meal-->
         <scene sceneID="p4T-iw-yEb">
             <objects>
                 <viewController id="vtS-Bt-XdF" customClass="MealViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -339,7 +339,7 @@
                             <constraint firstItem="syC-MG-2PX" firstAttribute="centerY" secondItem="VVO-nQ-4Rk" secondAttribute="centerY" id="PKM-xP-slP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="flame" catalog="system" id="YMp-M5-ipy"/>
+                    <tabBarItem key="tabBarItem" title="Meal" image="face.smiling.fill" catalog="system" id="YMp-M5-ipy"/>
                     <connections>
                         <outlet property="calValue" destination="LfW-63-R1F" id="MN4-iJ-99k"/>
                         <outlet property="datePicker" destination="Ubs-fi-YcJ" id="jOG-wN-Vhw"/>
@@ -408,7 +408,7 @@
                         <viewLayoutGuide key="safeArea" id="b2Z-ws-ggY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mappin.and.ellipse" catalog="system" id="ier-Zu-7Kp"/>
+                    <tabBarItem key="tabBarItem" title="Goal" image="mappin.and.ellipse" catalog="system" id="ier-Zu-7Kp"/>
                     <navigationItem key="navigationItem" title="Title" id="pQc-hx-iKj"/>
                     <connections>
                         <segue destination="Yye-er-aQz" kind="show" identifier="toSecond" id="YXQ-f8-fIO"/>
@@ -465,7 +465,7 @@
                         <viewLayoutGuide key="safeArea" id="ZF1-k1-QEy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="p6K-kz-XnI"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="p6K-kz-XnI"/>
                     <navigationItem key="navigationItem" title="Hello" id="UAR-TR-SL8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -529,8 +529,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chart" width="128" height="128"/>
-        <image name="flame" catalog="system" width="108" height="128"/>
+        <image name="deskclock.fill" catalog="system" width="128" height="124"/>
+        <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
