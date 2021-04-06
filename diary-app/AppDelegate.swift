@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var appSyncClient: AWSAppSyncClient?
     
-    var username : String = ""
-    
-    var subID: String = ""
+    var username : String!
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
