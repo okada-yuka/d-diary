@@ -19,6 +19,10 @@ class MealViewController: UIViewController {
     @IBOutlet weak var calValue: UILabel!
     @IBOutlet weak var priceValue: UILabel!
     
+    var cal: Int = 0
+    var date: String = ""
+    var price: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +38,12 @@ class MealViewController: UIViewController {
     }
     
     @IBAction func priceValue(_ sender: UISlider) {
-        let price: Int = Int(sender.value)
+        price = Int(sender.value)
         priceValue.text = String(price)
     }
     
     @IBAction func calValue(_ sender: UISlider) {
-        let cal: Int = Int(sender.value)
+        cal = Int(sender.value)
         calValue.text = String(cal)
     }
     
@@ -48,17 +52,14 @@ class MealViewController: UIViewController {
         datePicker.datePickerMode = UIDatePicker.Mode.date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
-        let selectedDate = dateFormatter.string(from: datePicker.date)
-        print(selectedDate)
+        date = dateFormatter.string(from: datePicker.date)
     }
     
     
     // DynamoDBにデータを追加する
     func runMutation(){
-        print("push")
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateMealInput(mealId: "test", createdBy: "appDelegate.username", timing: "lunch", cal: 2)
-        
+        let mutationInput = CreateMealInput(userId: self.appDelegate.id, day: date, timing: "lunch", place: "cafe marble", price: price, cal: cal)
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
         appSyncClient?.perform(mutation: CreateMealMutation(input: mutationInput)) { (result, error) in
@@ -66,20 +67,18 @@ class MealViewController: UIViewController {
                 print("Error occurred: \(error.localizedDescription )")
             }
             
-            if let resultError = result?.errors{
-                print("Error saving the item on server: \(resultError)")
-                return
-            }
+//            if let resultError = result?.errors{
+//                print("Error saving the item on server: \(resultError)")
+//                return
+//            }
             
             print("データを追加（runMutation）")
-            //print("Mutation complete.")
-            //self.runQuery()
+
         }
  
     }
     
     @IBAction func pushDataToDynamo(_ sender: Any) {
-        print("push")
         runMutation()
     }
     

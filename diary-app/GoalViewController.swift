@@ -9,6 +9,7 @@ import UIKit
 import AWSMobileClient
 import AWSS3
 import AWSAppSync
+import AWSDynamoDB
 
 class GoalViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -35,20 +36,21 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateUserInput(id: "test", username: "appDelegate.username", star: 2)
+        let mutationInput = CreateWeightInput(userId: self.appDelegate.id, day: "test-date", weight: 20)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: CreateUserMutation(input: mutationInput)) { (result, error) in
+        appSyncClient?.perform(mutation: CreateWeightMutation(input: mutationInput)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
             }
             
-            if let resultError = result?.errors{
-                // すでに同じusernameが登録されている場合、このエラーになる
-                print("Error saving the item on server: \(resultError)")
-                return
-            }
+            // Weight, Mealの時ここでエラーになる（データは追加できている）
+//            if let resultError = result?.errors{
+//                // すでに同じusernameが登録されている場合、このエラーになる
+//                print("Error saving the item on server: \(resultError)")
+//                return
+//            }
             
             print("データを追加（runMutation）")
             //print("Mutation complete.")
@@ -56,23 +58,67 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         }
  
     }
+    // runQueryではなくこちらを使う
+    // DynamoDBからデータを取得
+    func fetchDynamoDBData(){
+        let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
+        let scanExpression = AWSDynamoDBScanExpression()
+        
+        dynamoDBObjectMapper.scan(User.self, expression: scanExpression).continueWith(){ (task: AWSTask<AWSDynamoDBPaginatedOutput>!) -> Void in
+            guard let items = task.result?.items as? [User] else {return}
+            if let error = task.error as NSError?{
+                print("The request failed. Error: \(error)")
+                return
+            }
+            
+        
+            print(items[0].username)
+            print(items.count)
+            
+            for index in 0 ..< items.count{
+                if items[index].username == self.appDelegate.username{
+                    self.appDelegate.id = items[index].id
+                    self.appDelegate.star = Int(items[index].star)
+                    self.appDelegate.goal = items[index].goal
+                    print(self.appDelegate.id)
+                    print(self.appDelegate.star)
+                    print(self.appDelegate.goal)
+                }
+            }
+        }
+    
+    }
     /*
     // DynamoDBからデータを取得
     func runQuery(){
-        
-        // 2回実行されてしまう（cachePolicyは消したら取得できなくなった）
-        appSyncClient?.fetch(query: ListUsersQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
-            if error != nil{
+
+        appSyncClient?.fetch(query: ListUsersQuery()) {(result, error) in
+            if error != nil {
                 print(error?.localizedDescription ?? "")
                 return
             }
+            result?.data?.listUsers?.items!.forEach { print(($0?.username)! + " " + ($0?.goal)!) }
             print("データを取得（runQuery）")
-            //print("Query complete.")
-            // 取得したレコードのnameとdescriptionをコンソールに表示
-            result?.data?.listUsers?.items!.forEach {
-                print(($0?.name)! + " \($0?.updatedAt)!")
-            }
         }
+        
+//        // 2回実行されてしまう（cachePolicyは消したら取得できなくなった）
+//        appSyncClient?.fetch(query: ListUsersQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+//            if error != nil{
+//                print(error?.localizedDescription ?? "")
+//                return
+//            }
+//            print("データを取得（runQuery）")
+//            //print("Query complete.")
+//            // 取得したレコードのnameとdescriptionをコンソールに表示
+////            result?.data?.listUsers?.items!.forEach {
+////                print(($0?.username)! + " \($0?.star)!")
+////            }
+//            result?.data?.listUsers?.items!.forEach {
+//                print(($0?.username)! + " " + ($0?.goal)!)
+//
+//            }
+//
+//        }
         
     }
     
@@ -112,12 +158,12 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func pushDataToDynamo(_ sender: Any) {
         runMutation()
     }
-    /*
+    
     // DyanmoDBからデータを取得する
     @IBAction func getDynamoData(_ sender: Any) {
-        runQuery()
+        fetchDynamoDBData()
     }
-    
+    /*
     // DyanmoDBにデータが追加されたらそのデータを取得する（アップデート情報など）
     @IBAction func startSubscribe(_ sender: Any) {
         subscribe()

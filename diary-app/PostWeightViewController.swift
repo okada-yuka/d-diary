@@ -35,8 +35,7 @@ class PostWeightViewController: UIViewController {
     func runMutation(){
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateWeightInput(weightId: "test", createdBy: appDelegate.username, day: "date", weight: 2)
-
+        let mutationInput = CreateWeightInput(userId: self.appDelegate.id, day: date, weight: self.weight)
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
         appSyncClient?.perform(mutation: CreateWeightMutation(input: mutationInput)) { (result, error) in
@@ -45,10 +44,10 @@ class PostWeightViewController: UIViewController {
                 print("Error occurred: \(error.localizedDescription )")
             }
             
-            if let resultError = result?.errors{
-                print("Error saving the item on server: \(resultError)")
-                return
-            }
+//            if let resultError = result?.errors{
+//                print("Error saving the item on server: \(resultError)")
+//                return
+//            }
             
             print("データを追加（runMutation）")
 

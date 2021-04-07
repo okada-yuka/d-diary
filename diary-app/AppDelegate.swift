@@ -16,19 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var appSyncClient: AWSAppSyncClient?
     
-    var username : String!
-    
+    var id: String!
+    var username: String!
+    var star: Int!
+    var goal: String!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        let accessKey = IAMConstans.accessKey
-//        let secretKey = IAMConstans.secretKey
-//        let provider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
-//
-//        let configuration = AWSServiceConfiguration(region: AWSRegionType.APNortheast1,credentialsProvider: provider)
-//
-//        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        let accessKey = IAMConstans.accessKey
+        let secretKey = IAMConstans.secretKey
+        let provider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.APNortheast1,credentialsProvider: provider)
+
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
 
         // AppSyncの初期設定
         do {

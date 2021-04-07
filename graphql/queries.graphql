@@ -1,87 +1,13 @@
 # this is an auto generated file. This will be overwritten
-query GetUser($id: String!) {
-  getUser(id: $id) {
+query GetWeight($id: ID!, $userID: String!) {
+  getWeight(id: $id, userID: $userID) {
     id
-    username
-    star
-    goal
-    weights {
-      items {
-        id
-        weightId
-        createdBy
-        day
-        weight
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    meals {
-      items {
-        id
-        mealId
-        createdBy
-        timing
-        place
-        price
-        cal
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    createdAt
-    updatedAt
-  }
-}
-query ListUsers(
-  $id: String
-  $filter: ModelUserFilterInput
-  $limit: Int
-  $nextToken: String
-  $sortDirection: ModelSortDirection
-) {
-  listUsers(
-    id: $id
-    filter: $filter
-    limit: $limit
-    nextToken: $nextToken
-    sortDirection: $sortDirection
-  ) {
-    items {
-      id
-      username
-      star
-      goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-    nextToken
-  }
-}
-query GetWeight($id: ID!) {
-  getWeight(id: $id) {
-    id
-    weightId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -92,15 +18,24 @@ query GetWeight($id: ID!) {
   }
 }
 query ListWeights(
+  $id: ID
+  $userID: ModelStringKeyConditionInput
   $filter: ModelWeightFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listWeights(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listWeights(
+    id: $id
+    userID: $userID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
       id
-      weightId
-      createdBy
+      userID
       user {
         id
         username
@@ -117,25 +52,19 @@ query ListWeights(
     nextToken
   }
 }
-query GetMeal($id: ID!) {
-  getMeal(id: $id) {
+query GetMeal($id: ID!, $userID: String!) {
+  getMeal(id: $id, userID: $userID) {
     id
-    mealId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
+    day
     timing
     place
     price
@@ -145,15 +74,24 @@ query GetMeal($id: ID!) {
   }
 }
 query ListMeals(
+  $id: ID
+  $userID: ModelStringKeyConditionInput
   $filter: ModelMealFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listMeals(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listMeals(
+    id: $id
+    userID: $userID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
       id
-      mealId
-      createdBy
+      userID
       user {
         id
         username
@@ -162,10 +100,48 @@ query ListMeals(
         createdAt
         updatedAt
       }
+      day
       timing
       place
       price
       cal
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetUser($id: String!, $username: String!) {
+  getUser(id: $id, username: $username) {
+    id
+    username
+    star
+    goal
+    createdAt
+    updatedAt
+  }
+}
+query ListUsers(
+  $id: String
+  $username: ModelStringKeyConditionInput
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listUsers(
+    id: $id
+    username: $username
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      username
+      star
+      goal
       createdAt
       updatedAt
     }
