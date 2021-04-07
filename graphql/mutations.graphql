@@ -1,140 +1,16 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateUser(
-  $input: CreateUserInput!
-  $condition: ModelUserConditionInput
-) {
-  createUser(input: $input, condition: $condition) {
-    id
-    username
-    star
-    goal
-    weights {
-      items {
-        id
-        weightId
-        createdBy
-        day
-        weight
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    meals {
-      items {
-        id
-        mealId
-        createdBy
-        timing
-        place
-        price
-        cal
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    createdAt
-    updatedAt
-  }
-}
-mutation UpdateUser(
-  $input: UpdateUserInput!
-  $condition: ModelUserConditionInput
-) {
-  updateUser(input: $input, condition: $condition) {
-    id
-    username
-    star
-    goal
-    weights {
-      items {
-        id
-        weightId
-        createdBy
-        day
-        weight
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    meals {
-      items {
-        id
-        mealId
-        createdBy
-        timing
-        place
-        price
-        cal
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    createdAt
-    updatedAt
-  }
-}
-mutation DeleteUser(
-  $input: DeleteUserInput!
-  $condition: ModelUserConditionInput
-) {
-  deleteUser(input: $input, condition: $condition) {
-    id
-    username
-    star
-    goal
-    weights {
-      items {
-        id
-        weightId
-        createdBy
-        day
-        weight
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    meals {
-      items {
-        id
-        mealId
-        createdBy
-        timing
-        place
-        price
-        cal
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-    createdAt
-    updatedAt
-  }
-}
 mutation CreateWeight(
   $input: CreateWeightInput!
   $condition: ModelWeightConditionInput
 ) {
   createWeight(input: $input, condition: $condition) {
     id
-    weightId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -150,19 +26,12 @@ mutation UpdateWeight(
 ) {
   updateWeight(input: $input, condition: $condition) {
     id
-    weightId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -178,19 +47,12 @@ mutation DeleteWeight(
 ) {
   deleteWeight(input: $input, condition: $condition) {
     id
-    weightId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -206,22 +68,16 @@ mutation CreateMeal(
 ) {
   createMeal(input: $input, condition: $condition) {
     id
-    mealId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
+    day
     timing
     place
     price
@@ -236,22 +92,16 @@ mutation UpdateMeal(
 ) {
   updateMeal(input: $input, condition: $condition) {
     id
-    mealId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
+    day
     timing
     place
     price
@@ -266,26 +116,59 @@ mutation DeleteMeal(
 ) {
   deleteMeal(input: $input, condition: $condition) {
     id
-    mealId
-    createdBy
+    userID
     user {
       id
       username
       star
       goal
-      weights {
-        nextToken
-      }
-      meals {
-        nextToken
-      }
       createdAt
       updatedAt
     }
+    day
     timing
     place
     price
     cal
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    username
+    star
+    goal
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    username
+    star
+    goal
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    username
+    star
+    goal
     createdAt
     updatedAt
   }

@@ -20,6 +20,7 @@
 		C16FFADE25F46B7D00423DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADC25F46B7D00423DCA /* Main.storyboard */; };
 		C16FFAE025F46B7F00423DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADF25F46B7F00423DCA /* Assets.xcassets */; };
 		C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */; };
+		C18F7C47261DEA15007A8813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F7C46261DEA15007A8813 /* User.swift */; };
 		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
 		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
 		C1E4141A26178C4000CC3B03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4141926178C4000CC3B03 /* API.swift */; };
@@ -46,6 +47,7 @@
 		C16FFADF25F46B7F00423DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16FFAE225F46B7F00423DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C16FFAE425F46B7F00423DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18F7C46261DEA15007A8813 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		C1E4141926178C4000CC3B03 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
@@ -113,6 +115,7 @@
 				C1ECD68725F68A4C00C0BAC2 /* Constants.swift */,
 				C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */,
 				C12B74AE25FBAECE00932952 /* MealViewController.swift */,
+				C18F7C46261DEA15007A8813 /* User.swift */,
 			);
 			path = "diary-app";
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		142E1E1A022A45348380011A /* Resources */ = {
+		06936C11DD454CFD997B9E94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18F7C47261DEA15007A8813 /* User.swift in Sources */,
 				C1E4141A26178C4000CC3B03 /* API.swift in Sources */,
 				C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */,
 				C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */,

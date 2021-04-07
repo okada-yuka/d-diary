@@ -17,6 +17,7 @@ class WeightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // appSyncの設定
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appSyncClient = appDelegate.appSyncClient
         
