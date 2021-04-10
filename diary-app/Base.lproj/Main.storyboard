@@ -165,12 +165,12 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ex-V2-40q">
                                         <rect key="frame" x="-5" y="0.0" width="414" height="883"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-RI-C6V">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-RI-C6V">
                                                 <rect key="frame" x="122" y="351" width="208" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmE-E7-K8i">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmE-E7-K8i">
                                                 <rect key="frame" x="115" y="309" width="208" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -211,7 +211,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VmT-ZH-xJn">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VmT-ZH-xJn">
                                                 <rect key="frame" x="84" y="658" width="168" height="30"/>
                                                 <connections>
                                                     <action selector="calValue:" destination="vtS-Bt-XdF" eventType="valueChanged" id="Ikr-YF-ovA"/>
@@ -223,7 +223,7 @@
                                                     <constraint firstAttribute="height" constant="102" id="0wc-8d-2bs"/>
                                                 </constraints>
                                             </datePicker>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pBT-2T-8PU">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pBT-2T-8PU">
                                                 <rect key="frame" x="36" y="237" width="294" height="32"/>
                                                 <segments>
                                                     <segment title="Breakfast"/>
@@ -234,7 +234,7 @@
                                                     <action selector="segmentChanged:" destination="vtS-Bt-XdF" eventType="valueChanged" id="FN2-zt-6I6"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfW-63-R1F">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfW-63-R1F">
                                                 <rect key="frame" x="280" y="662" width="63" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="63" id="CJB-Gl-On5"/>
@@ -338,10 +338,12 @@
                     <tabBarItem key="tabBarItem" title="Meal" image="face.smiling.fill" catalog="system" id="YMp-M5-ipy"/>
                     <connections>
                         <outlet property="calLabel" destination="LfW-63-R1F" id="Mij-nD-VER"/>
+                        <outlet property="calSlider" destination="VmT-ZH-xJn" id="Hb4-W6-fIH"/>
                         <outlet property="datePicker" destination="Ubs-fi-YcJ" id="jOG-wN-Vhw"/>
                         <outlet property="detailTextField" destination="xmE-E7-K8i" id="W4N-eY-b7t"/>
                         <outlet property="placeTextField" destination="KIh-RI-C6V" id="JPm-Mw-95D"/>
                         <outlet property="priceLabel" destination="O1a-zv-y5D" id="MWe-TJ-RJ0"/>
+                        <outlet property="priceSlider" destination="KxC-Ew-nVd" id="j5s-7m-dZC"/>
                         <outlet property="timingSegment" destination="pBT-2T-8PU" id="Ik1-OE-Rqq"/>
                     </connections>
                 </viewController>

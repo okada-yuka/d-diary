@@ -21,6 +21,8 @@ class MealViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var timingSegment: UISegmentedControl!
     @IBOutlet weak var detailTextField: UITextField!
     @IBOutlet weak var placeTextField: UITextField!
+    @IBOutlet weak var priceSlider: UISlider!
+    @IBOutlet weak var calSlider: UISlider!
     
     
     var cal: Int = 0
@@ -35,12 +37,17 @@ class MealViewController: UIViewController, UITextFieldDelegate {
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapGR)
-        
-        // Do any additional setup after loading the view.
-        appSyncClient = appDelegate.appSyncClient
-        
         detailTextField.delegate = self
         placeTextField.delegate = self
+        
+        appSyncClient = appDelegate.appSyncClient
+        
+        // priceSliderとcalSliderの初期値を設定
+        priceSlider.value = 2500
+        calSlider.value = 3
+        priceLabel.text = String(2500)
+        calLabel.text = String(3)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
