@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     dynamoDB = boto3.resource("dynamodb")
 
     # DynamoDBのテーブル名
-    table = dynamoDB.Table("User-7saad3yd3rb4nnartiwoujn54e-dev")
+    table = dynamoDB.Table("User-p3h4kmdwhzhs5ot42h6sopskoe-dev")
 
     table.put_item(
       Item = {

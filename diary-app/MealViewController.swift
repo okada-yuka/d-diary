@@ -84,7 +84,7 @@ class MealViewController: UIViewController, UITextFieldDelegate {
         date = dateFormatter.string(from: datePicker.date)
         
         // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateMealInput(userId: self.appDelegate.id, day: date, timing: timing, place: placeTextField.text, price: price, cal: cal)
+        let mutationInput = CreateMealInput(userId: self.appDelegate.id, day: date, timing: timing, detail: detailTextField.text, place: placeTextField.text, price: price, cal: cal)
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
         appSyncClient?.perform(mutation: CreateMealMutation(input: mutationInput)) { (result, error) in
