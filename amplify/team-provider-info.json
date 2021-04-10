@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-diaryapp-dev-00731-authRole",
-      "UnauthRoleArn": "arn:aws:iam::509430456398:role/amplify-diaryapp-dev-00731-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::509430456398:role/amplify-diaryapp-dev-00731-authRole",
+      "AuthRoleName": "amplify-diaryapp-dev-192614-authRole",
+      "UnauthRoleArn": "arn:aws:iam::509430456398:role/amplify-diaryapp-dev-192614-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::509430456398:role/amplify-diaryapp-dev-192614-authRole",
       "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-diaryapp-dev-00731-deployment",
-      "UnauthRoleName": "amplify-diaryapp-dev-00731-unauthRole",
-      "StackName": "amplify-diaryapp-dev-00731",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:509430456398:stack/amplify-diaryapp-dev-00731/fbff5680-97b2-11eb-a905-0a18cbf5724d",
-      "AmplifyAppId": "dq6u1g8v9xfx0"
+      "DeploymentBucketName": "amplify-diaryapp-dev-192614-deployment",
+      "UnauthRoleName": "amplify-diaryapp-dev-192614-unauthRole",
+      "StackName": "amplify-diaryapp-dev-192614",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:509430456398:stack/amplify-diaryapp-dev-192614/2fc5cf40-99e7-11eb-86a2-06420aaf754f",
+      "AmplifyAppId": "d2z5dj8vixl23j"
     },
     "categories": {
       "auth": {
-        "diaryapp7d12a3fd": {}
+        "diaryappbf8d7583": {}
       }
     }
   }

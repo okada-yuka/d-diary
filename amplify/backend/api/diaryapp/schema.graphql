@@ -11,6 +11,7 @@ type Meal @model @key(fields: ["id", "userID"]){
  user: User @connection(fields: ["userID"])
  day: String!
  timing: String!
+ detail: String
  place: String
  price: Int
  cal: Int!

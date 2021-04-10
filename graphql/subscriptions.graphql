@@ -67,6 +67,7 @@ subscription OnCreateMeal {
     }
     day
     timing
+    detail
     place
     price
     cal
@@ -88,6 +89,7 @@ subscription OnUpdateMeal {
     }
     day
     timing
+    detail
     place
     price
     cal
@@ -109,6 +111,7 @@ subscription OnDeleteMeal {
     }
     day
     timing
+    detail
     place
     price
     cal

@@ -9,7 +9,7 @@ class User: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
 
     class func dynamoDBTableName() -> String {
         // DynamoDBのテーブル名
-        return "User-7saad3yd3rb4nnartiwoujn54e-dev"
+        return "User-p3h4kmdwhzhs5ot42h6sopskoe-dev"
     }
 
     class func hashKeyAttribute() -> String {

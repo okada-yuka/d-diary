@@ -79,6 +79,7 @@ mutation CreateMeal(
     }
     day
     timing
+    detail
     place
     price
     cal
@@ -103,6 +104,7 @@ mutation UpdateMeal(
     }
     day
     timing
+    detail
     place
     price
     cal
@@ -127,6 +129,7 @@ mutation DeleteMeal(
     }
     day
     timing
+    detail
     place
     price
     cal

@@ -66,6 +66,7 @@ query GetMeal($id: ID!, $userID: String!) {
     }
     day
     timing
+    detail
     place
     price
     cal
@@ -102,6 +103,7 @@ query ListMeals(
       }
       day
       timing
+      detail
       place
       price
       cal
