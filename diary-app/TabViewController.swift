@@ -34,6 +34,7 @@ class TabViewController: UITabBarController {
                     DispatchQueue.main.async {
                         print("Logged In")
                         self.appDelegate.username = AWSMobileClient.default().username
+                        GoalViewController().fetchDynamoDBData()
                     }
                 case .signedOut:
                     AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (UserState, error) in
@@ -41,6 +42,7 @@ class TabViewController: UITabBarController {
                             DispatchQueue.main.async {
                                 print("Sign In")
                                 self.appDelegate.username = AWSMobileClient.default().username
+                                GoalViewController().fetchDynamoDBData()
                             }
 
                         }
