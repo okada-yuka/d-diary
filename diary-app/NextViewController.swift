@@ -32,6 +32,7 @@ class NextViewController: UIViewController {
             if let signInState = signInState {
                 print("SignInしました")
                 self.appDelegate.username = AWSMobileClient.default().username
+                GoalViewController().fetchDynamoDBData()
             } else if let error = error {
                 print("error logging in: \(error.localizedDescription)")
             }
@@ -39,24 +40,5 @@ class NextViewController: UIViewController {
     
         
     }
-    
-    // ログイン、再ログイン時に実行する関数（username、star、goal等を更新）
-    func update_signIn(){
-        // usernameの更新（cognito）
-        appDelegate.username = AWSMobileClient.default().username
-        print(appDelegate.username)
-        
-        // starとgoalの更新（DynamoDB）
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -90,6 +90,12 @@ class MealViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateFormat = "dd MMMM yyyy"
         date = dateFormatter.string(from: datePicker.date)
         
+        // 選択を変更していない場合にも取得する
+        segmentChanged([])
+        priceValue(priceSlider)
+        calValue(calSlider)
+        
+        
         // CreateToDoInput関数：入力パラメータを作成
         let mutationInput = CreateMealInput(userId: self.appDelegate.id, day: date, timing: timing, detail: detailTextField.text, place: placeTextField.text, price: price, cal: cal)
         // CreateTodoMutation関数：
