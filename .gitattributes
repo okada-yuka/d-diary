@@ -1,2 +1,1 @@
-python-modules/* linguist-vendored
-nodejs-modules/* linguist-vendored
+*.py linguist-vendored
