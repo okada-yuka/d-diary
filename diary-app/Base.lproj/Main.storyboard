@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="On1-3q-Nfv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26F-EH-fN7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,8 @@
         <!--Navigation View Controller-->
         <scene sceneID="SxK-6v-0BB">
             <objects>
-                <navigationController id="On1-3q-Nfv" customClass="NavigationViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="On1-3q-Nfv" customClass="NavigationViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qDv-Um-Zom"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jya-t3-dL6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -24,16 +25,41 @@
             </objects>
             <point key="canvasLocation" x="-140" y="83"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="ba2-O1-ThA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="26F-EH-fN7" customClass="SplashViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22b-8Q-x3j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="okaeru" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-vp-0Lz">
+                                <rect key="frame" x="90" y="325" width="234" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tRM-Uq-lMs"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="splash_imageView" destination="o1b-vp-0Lz" id="vbz-7R-EPU"/>
+                        <segue destination="On1-3q-Nfv" kind="show" identifier="toNavigation" id="gxf-JW-b5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haV-CW-yUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1086.9565217391305" y="81.696428571428569"/>
+        </scene>
         <!--Weight-->
         <scene sceneID="ftR-lX-eLP">
             <objects>
                 <viewController id="BoN-Rd-TLy" customClass="WeightViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOV-Je-aZV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-kD-CaL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-32" width="414" height="906"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-aH-mgP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="936"/>
@@ -107,7 +133,7 @@
             <objects>
                 <viewController id="fm0-x0-fMd" customClass="PostWeightViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ceY-XT-fbF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KR-Tu-A8Q">
@@ -156,11 +182,11 @@
             <objects>
                 <viewController id="vtS-Bt-XdF" customClass="MealViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VVO-nQ-4Rk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syC-MG-2PX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-32" width="414" height="906"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ex-V2-40q">
                                         <rect key="frame" x="-5" y="0.0" width="414" height="883"/>
@@ -356,7 +382,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="6KQ-du-RRg" customClass="GoalViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLl-aH-mD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goal_bg" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-C9-gUH">
@@ -364,7 +390,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FId-7T-pSi">
-                                <rect key="frame" x="171" y="433" width="46" height="30"/>
+                                <rect key="frame" x="50" y="100" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
@@ -466,6 +492,14 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-zb-gHk">
+                                <rect key="frame" x="123" y="496" width="169" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="プロフィールを編集する"/>
+                                <connections>
+                                    <action selector="pushEditButton:" destination="uW4-zd-hg2" eventType="touchUpInside" id="auF-Zl-smV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZF1-k1-QEy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -488,7 +522,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Yye-er-aQz" customClass="NextViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57p-4w-30O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85n-Ad-ru5">
@@ -515,7 +549,7 @@
         <!--Tab View Controller-->
         <scene sceneID="vS4-PO-xEl">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fFp-Bg-FjQ" customClass="TabViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="fFp-Bg-FjQ" customClass="TabViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kfn-cN-Kzx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iyQ-uq-LbM">
@@ -537,13 +571,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="55U-uN-7cP"/>
+        <segue reference="djF-aa-2rq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="deskclock.fill" catalog="system" width="128" height="124"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
         <image name="goal_bg" width="390" height="844"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="okaeru" width="1024" height="768"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

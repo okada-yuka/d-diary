@@ -10,6 +10,8 @@ import AWSMobileClient
 
 class NavigationViewController: UINavigationController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,8 @@ class NavigationViewController: UINavigationController {
             // 文字の色
             .foregroundColor: Pallet.light_blue
         ]
+        
     }
 
+    
 }

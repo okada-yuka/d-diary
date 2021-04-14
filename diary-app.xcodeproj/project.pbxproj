@@ -20,6 +20,8 @@
 		C16FFADE25F46B7D00423DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADC25F46B7D00423DCA /* Main.storyboard */; };
 		C16FFAE025F46B7F00423DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16FFADF25F46B7F00423DCA /* Assets.xcassets */; };
 		C16FFAE325F46B7F00423DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16FFAE125F46B7F00423DCA /* LaunchScreen.storyboard */; };
+		C1858CCB2623F21F007C0503 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1858CCA2623F21F007C0503 /* EditProfileViewController.swift */; };
+		C1858CE126268CD3007C0503 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1858CE026268CD3007C0503 /* SplashViewController.swift */; };
 		C18F7C47261DEA15007A8813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F7C46261DEA15007A8813 /* User.swift */; };
 		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
 		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
@@ -47,6 +49,8 @@
 		C16FFADF25F46B7F00423DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16FFAE225F46B7F00423DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C16FFAE425F46B7F00423DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1858CCA2623F21F007C0503 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		C1858CE026268CD3007C0503 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C18F7C46261DEA15007A8813 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				C1437C0E25F9B7BC00D7CBEA /* WeightViewController.swift */,
 				C12B74AE25FBAECE00932952 /* MealViewController.swift */,
 				C18F7C46261DEA15007A8813 /* User.swift */,
+				C1858CCA2623F21F007C0503 /* EditProfileViewController.swift */,
+				C1858CE026268CD3007C0503 /* SplashViewController.swift */,
 			);
 			path = "diary-app";
 			sourceTree = "<group>";
@@ -136,14 +142,6 @@
 				A553961076B68DE7C4128D88 /* Pods_diary_app.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		06936C11DD454CFD997B9E94 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			path = undefined;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +266,8 @@
 				C12B74AF25FBAECE00932952 /* MealViewController.swift in Sources */,
 				C127C52125F669AE004C6FA8 /* NextViewController.swift in Sources */,
 				C16FFADB25F46B7D00423DCA /* GoalViewController.swift in Sources */,
+				C1858CE126268CD3007C0503 /* SplashViewController.swift in Sources */,
+				C1858CCB2623F21F007C0503 /* EditProfileViewController.swift in Sources */,
 				C16FFAD725F46B7D00423DCA /* AppDelegate.swift in Sources */,
 				C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */,
 				C1FABA8725F52B5800F4C991 /* TabViewController.swift in Sources */,
