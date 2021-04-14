@@ -31,7 +31,10 @@ class ProfileViewController: UIViewController {
         // NavigationBarのTitleを設定
         self.parent?.navigationItem.title = "プロフィール"
         usernameLabel.text = appDelegate.username
+        starsLabel.text = String(appDelegate.star)
+        goalLabel.text = appDelegate.goal
     }
-    
 
+    
+    
 }

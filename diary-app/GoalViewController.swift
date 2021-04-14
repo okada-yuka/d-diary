@@ -16,6 +16,8 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     var appSyncClient: AWSAppSyncClient?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +29,6 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
         self.parent?.navigationItem.title = "目標を設定する"
-        print("goalView")
     }
     
     
