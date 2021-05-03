@@ -11,19 +11,24 @@ import AWSS3
 import AWSAppSync
 import AWSDynamoDB
 
-class GoalViewController: UIViewController, UINavigationControllerDelegate {
+class GoalViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var goalTextField: UITextField!
+    
     var appSyncClient: AWSAppSyncClient?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
         appSyncClient = appDelegate.appSyncClient
-
+        
+        // 画面のどこかがタップされた時にdismissKeyboard関数を呼び出す
+        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGR.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGR)
+        goalTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,16 +36,16 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         self.parent?.navigationItem.title = "目標を設定する"
     }
     
-    
-    // DynamoDBにデータを追加する
+    // goalを更新する
+    // DynamoDBのデータを更新する
     func runMutation(){
         
-        // CreateToDoInput関数：入力パラメータを作成
-        let mutationInput = CreateWeightInput(userId: self.appDelegate.id, day: "test-date", weight: 20)
+        // UpdateUserInput関数：入力パラメータを作成
+        let mutationInput = UpdateUserInput(id: self.appDelegate.id, username: self.appDelegate.username, star: self.appDelegate.star, goal: self.goalTextField.text)
         
         // CreateTodoMutation関数：
         // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: CreateWeightMutation(input: mutationInput)) { (result, error) in
+        appSyncClient?.perform(mutation: UpdateUserMutation(input: mutationInput)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
             }
@@ -88,6 +93,18 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate {
         }
     
     }
+    
+    // キーボードを閉じる（画面のどこかが押された時に呼び出される）
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    // Returnキーが押されたらキーボードを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        goalTextField.resignFirstResponder()
+        return true
+    }
+    
     /*
     // DynamoDBからデータを取得
     func runQuery(){

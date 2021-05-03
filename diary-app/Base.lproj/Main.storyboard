@@ -415,9 +415,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-ws-13P">
-                                <rect key="frame" x="113" y="628" width="164" height="30"/>
+                                <rect key="frame" x="142" y="628" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dynamoにデータを追加"/>
+                                <state key="normal" title="goalを更新する"/>
                                 <connections>
                                     <action selector="pushDataToDynamo:" destination="6KQ-du-RRg" eventType="touchUpInside" id="d8l-oy-xK5"/>
                                 </connections>
@@ -438,6 +438,12 @@
                                     <action selector="startSubscribe:" destination="6KQ-du-RRg" eventType="touchUpInside" id="fNF-bi-u6N"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-zq-ufr">
+                                <rect key="frame" x="217" y="451" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b2Z-ws-ggY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -445,6 +451,7 @@
                     <tabBarItem key="tabBarItem" title="Goal" image="mappin.and.ellipse" catalog="system" id="ier-Zu-7Kp"/>
                     <navigationItem key="navigationItem" title="Title" id="pQc-hx-iKj"/>
                     <connections>
+                        <outlet property="goalTextField" destination="yXc-zq-ufr" id="oJ6-8i-RGK"/>
                         <segue destination="Yye-er-aQz" kind="show" identifier="toSecond" id="YXQ-f8-fIO"/>
                     </connections>
                 </viewController>
@@ -495,14 +502,6 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-zb-gHk">
-                                <rect key="frame" x="123" y="496" width="169" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="プロフィールを編集する"/>
-                                <connections>
-                                    <action selector="pushEditButton:" destination="uW4-zd-hg2" eventType="touchUpInside" id="auF-Zl-smV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZF1-k1-QEy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -574,6 +573,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YXQ-f8-fIO"/>
         <segue reference="55U-uN-7cP"/>
     </inferredMetricsTieBreakers>
     <resources>
