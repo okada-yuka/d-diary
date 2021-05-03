@@ -36,6 +36,7 @@ class TabViewController: UITabBarController {
                         self.appDelegate.username = AWSMobileClient.default().username
                         GoalViewController().fetchDynamoDBData()
                     }
+                    
                 case .signedOut:
                     AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (UserState, error) in
                         if (error == nil){ //サインイン成功時
@@ -56,6 +57,7 @@ class TabViewController: UITabBarController {
             } else if let error = error {
                 print(error.localizedDescription)
             }
+
         }
         
 
