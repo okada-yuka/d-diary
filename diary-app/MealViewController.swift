@@ -118,6 +118,11 @@ class MealViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func pushDataToDynamo(_ sender: Any) {
         runMutation()
+        // データを追加しましたとかポップアップで表示したらいいかも
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func pushCancel(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
