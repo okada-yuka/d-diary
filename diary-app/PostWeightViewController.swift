@@ -14,6 +14,7 @@ class PostWeightViewController: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var weightSlider: UISlider!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var appSyncClient: AWSAppSyncClient?
@@ -27,7 +28,8 @@ class PostWeightViewController: UIViewController {
         super.viewDidLoad()
         appSyncClient = appDelegate.appSyncClient
         // Do any additional setup after loading the view.
-        
+     
+        weightSlider.value = 40
     }
     
 
