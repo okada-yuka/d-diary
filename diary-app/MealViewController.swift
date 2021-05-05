@@ -48,6 +48,7 @@ class MealViewController: UIViewController, UITextFieldDelegate {
         priceLabel.text = String(2500)
         calLabel.text = String(3)
         
+        view.backgroundColor = Pallet.bg_light_blue
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,7 +17,7 @@ class MealTopViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
-        self.parent?.navigationItem.title = "食事を記録する"
+        self.parent?.navigationItem.title = "データを登録する"
     }
     
     /*

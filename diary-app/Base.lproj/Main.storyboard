@@ -60,11 +60,11 @@
             <objects>
                 <viewController id="BoN-Rd-TLy" customClass="WeightViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOV-Je-aZV">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-kD-CaL">
-                                <rect key="frame" x="0.0" y="-32" width="390" height="854"/>
+                                <rect key="frame" x="0.0" y="-44" width="390" height="932"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-aH-mgP">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="936"/>
@@ -125,9 +125,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weight" image="deskclock.fill" catalog="system" selectedImage="deskclock.fill" id="INE-pI-PTI"/>
                     <navigationItem key="navigationItem" id="zvf-aE-Lpo"/>
-                    <connections>
-                        <segue destination="fm0-x0-fMd" kind="show" identifier="toPostWeight" id="Ygc-UO-0Ql"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlK-IV-p1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,28 +138,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KR-Tu-A8Q">
-                                <rect key="frame" x="256" y="725" width="116" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weight_background" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-Lx-V1t">
+                                <rect key="frame" x="0.0" y="53" width="390" height="790"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="投稿"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KR-Tu-A8Q">
+                                <rect key="frame" x="206" y="499" width="129" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add-button"/>
                                 <connections>
                                     <action selector="pushDataToDynamo:" destination="fm0-x0-fMd" eventType="touchUpInside" id="soU-pk-wea"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="agX-IY-EB8">
-                                <rect key="frame" x="0.0" y="190" width="390" height="162"/>
+                                <rect key="frame" x="62" y="385" width="177" height="31"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Y3p-yA-UCr">
-                                <rect key="frame" x="94" y="543" width="226" height="30"/>
+                                <rect key="frame" x="60" y="454" width="226" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="getWeightValue:" destination="fm0-x0-fMd" eventType="valueChanged" id="g3c-39-P8h"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvw-we-arT">
-                                <rect key="frame" x="293" y="580" width="42" height="96"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-wI-K1b">
+                                <rect key="frame" x="62" y="499" width="129" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cansel-button"/>
+                                <connections>
+                                    <action selector="pushCancel:" destination="fm0-x0-fMd" eventType="touchUpInside" id="hy3-CD-FzA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvw-we-arT">
+                                <rect key="frame" x="293" y="448" width="42" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -170,7 +178,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jai-1X-0x4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="k4U-zy-ocL"/>
                     <connections>
@@ -180,7 +188,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJ0-fv-GC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766.6666666666667" y="1516.7410714285713"/>
+            <point key="canvasLocation" x="1189" y="1564"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b3j-IV-XgA">
+            <objects>
+                <viewController id="ufa-i2-MTn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XkQ-XW-GPt">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vkg-TN-IgI"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gu9-Dl-aDV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLf-Cc-hKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="1564"/>
         </scene>
         <!--Meal-->
         <scene sceneID="p4T-iw-yEb">
@@ -300,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW0-ZC-Toq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.92307692307691" y="1490.7582938388625"/>
+            <point key="canvasLocation" x="527.69230769230762" y="1563.9810426540284"/>
         </scene>
         <!--Title-->
         <scene sceneID="MDH-W5-sgX">
@@ -381,7 +405,7 @@
             </objects>
             <point key="canvasLocation" x="1621.7391304347827" y="81.696428571428569"/>
         </scene>
-        <!--Meal-->
+        <!--登録-->
         <scene sceneID="QZP-vR-0Kz">
             <objects>
                 <viewController id="aaU-2x-bzQ" customClass="MealTopViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,10 +417,18 @@
                                 <rect key="frame" x="0.0" y="80" width="390" height="681"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-Bk-pRJ">
-                                <rect key="frame" x="200" y="226" width="173" height="87"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-9C-W4c">
+                                <rect key="frame" x="264" y="256" width="126" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="toPost-button"/>
+                                <state key="normal" image="add-weight-button"/>
+                                <connections>
+                                    <segue destination="fm0-x0-fMd" kind="show" id="3RE-2K-DkZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-Bk-pRJ">
+                                <rect key="frame" x="155" y="256" width="126" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add-meal-button"/>
                                 <connections>
                                     <segue destination="vtS-Bt-XdF" kind="show" id="Oen-yC-Q5B"/>
                                 </connections>
@@ -405,7 +437,7 @@
                         <viewLayoutGuide key="safeArea" id="eQY-g6-LZm"/>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meal" image="smiley.fill" catalog="system" selectedImage="face.smiling.fill" id="GmX-Ac-WoN"/>
+                    <tabBarItem key="tabBarItem" title="登録" image="plus" catalog="system" selectedImage="face.smiling.fill" id="GmX-Ac-WoN"/>
                     <navigationItem key="navigationItem" id="yDO-PB-bHM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkY-m3-2la" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -516,7 +548,6 @@
                     <connections>
                         <segue destination="6KQ-du-RRg" kind="relationship" relationship="viewControllers" id="djF-aa-2rq"/>
                         <segue destination="uW4-zd-hg2" kind="relationship" relationship="viewControllers" id="f9v-es-abo"/>
-                        <segue destination="BoN-Rd-TLy" kind="relationship" relationship="viewControllers" id="Arf-xZ-uMn"/>
                         <segue destination="aaU-2x-bzQ" kind="relationship" relationship="viewControllers" id="OvJ-vK-F9v"/>
                     </connections>
                 </tabBarController>
@@ -530,6 +561,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-button" width="240" height="70"/>
+        <image name="add-meal-button" width="258" height="210"/>
+        <image name="add-weight-button" width="258" height="210"/>
         <image name="cansel-button" width="240" height="70"/>
         <image name="deskclock.fill" catalog="system" width="128" height="124"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
@@ -538,9 +571,9 @@
         <image name="meal_background" width="780" height="1688"/>
         <image name="okaeru" width="1024" height="768"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="postmeal_background" width="780" height="1688"/>
-        <image name="smiley.fill" catalog="system" width="128" height="121"/>
-        <image name="toPost-button" width="306" height="156"/>
+        <image name="weight_background" width="780" height="1688"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

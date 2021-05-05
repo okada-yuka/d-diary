@@ -72,6 +72,10 @@ class PostWeightViewController: UIViewController {
         date = dateFormatter.string(from: datePicker.date)
         
         runMutation()
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    @IBAction func pushCancel(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
