@@ -33,7 +33,12 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
     
     override func viewWillAppear(_ animated: Bool) {
         // NavigationBarのTitleを設定
-        self.parent?.navigationItem.title = "目標を設定する"
+        self.parent?.navigationItem.title = ""
+        
+        // NavigationBarを透明にする
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
     }
     
     // goalを更新する
@@ -77,16 +82,15 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
             }
             
         
-            print(items[0].username)
-            print(items.count)
+//            print(items[0].username)
+//            print(items.count)
             
             for index in 0 ..< items.count{
                 if items[index].username == self.appDelegate.username{
                     self.appDelegate.id = items[index].id
                     self.appDelegate.star = Int(items[index].star)
                     self.appDelegate.goal = items[index].goal
-                    print(self.appDelegate.id)
-                    print(self.appDelegate.star)
+
                     print(self.appDelegate.goal)
                 }
             }

@@ -233,12 +233,16 @@
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-RI-C6V">
                                                 <rect key="frame" x="60" y="478" width="274" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95066624369999997" green="0.95066624369999997" blue="0.95066624369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmE-E7-K8i">
                                                 <rect key="frame" x="60" y="411" width="274" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95066624369999997" green="0.95066624369999997" blue="0.95066624369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -252,6 +256,7 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pBT-2T-8PU">
                                                 <rect key="frame" x="60" y="341" width="274" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <segments>
                                                     <segment title="Breakfast"/>
                                                     <segment title="Lunch"/>
@@ -335,57 +340,23 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="6KQ-du-RRg" customClass="GoalViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLl-aH-mD4">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goal_bg" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-C9-gUH">
-                                <rect key="frame" x="-5" y="66" width="414" height="699"/>
+                                <rect key="frame" x="-19" y="0.0" width="428" height="784"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FId-7T-pSi">
-                                <rect key="frame" x="50" y="100" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" systemColor="systemPinkColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushNextButton:" destination="6KQ-du-RRg" eventType="touchUpInside" id="PKS-TE-qah"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbT-ZM-esj">
                                 <rect key="frame" x="0.0" y="118" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nto-2t-SLZ">
-                                <rect key="frame" x="179" y="542" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="S3"/>
-                                <connections>
-                                    <action selector="pushS3Button:" destination="6KQ-du-RRg" eventType="touchUpInside" id="aYR-3C-gjF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-ws-13P">
-                                <rect key="frame" x="142" y="628" width="106" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="goalを更新する"/>
-                                <connections>
-                                    <action selector="pushDataToDynamo:" destination="6KQ-du-RRg" eventType="touchUpInside" id="d8l-oy-xK5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qc-H3-bTl">
-                                <rect key="frame" x="106" y="681" width="179" height="30"/>
+                                <rect key="frame" x="16" y="197" width="179" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Dynamoからデータを取得"/>
                                 <connections>
                                     <action selector="getDynamoData:" destination="6KQ-du-RRg" eventType="touchUpInside" id="wCj-DE-xsO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZd-nO-32b">
-                                <rect key="frame" x="125" y="742" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="サブスクライブ開始"/>
-                                <connections>
-                                    <action selector="startSubscribe:" destination="6KQ-du-RRg" eventType="touchUpInside" id="fNF-bi-u6N"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-zq-ufr">
@@ -394,6 +365,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-ws-13P">
+                                <rect key="frame" x="217" y="197" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="goalを更新する"/>
+                                <connections>
+                                    <action selector="pushDataToDynamo:" destination="6KQ-du-RRg" eventType="touchUpInside" id="d8l-oy-xK5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b2Z-ws-ggY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -402,12 +381,11 @@
                     <navigationItem key="navigationItem" title="Title" id="pQc-hx-iKj"/>
                     <connections>
                         <outlet property="goalTextField" destination="yXc-zq-ufr" id="oJ6-8i-RGK"/>
-                        <segue destination="Yye-er-aQz" kind="show" identifier="toSecond" id="YXQ-f8-fIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvt-7W-yyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1621.5384615384614" y="81.042654028436019"/>
         </scene>
         <!--Resister-->
         <scene sceneID="QZP-vR-0Kz">
@@ -437,6 +415,10 @@
                                     <segue destination="vtS-Bt-XdF" kind="show" id="Oen-yC-Q5B"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navigation_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Xpm-18-UIy">
+                                <rect key="frame" x="0.0" y="83" width="390" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eQY-g6-LZm"/>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -471,14 +453,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="財布" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-YN-dg6">
-                                <rect key="frame" x="186" y="336" width="35" height="21"/>
+                                <rect key="frame" x="186" y="336" width="153" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dll-aQ-fjQ">
-                                <rect key="frame" x="187" y="307" width="21" height="21"/>
+                                <rect key="frame" x="187" y="307" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
@@ -491,9 +473,25 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-9V-5gP">
+                                <rect key="frame" x="189" y="470" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="signOut:" destination="uW4-zd-hg2" eventType="touchUpInside" id="fnX-Pm-YFD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR4-Tj-XWq">
+                                <rect key="frame" x="301" y="269" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="更新する"/>
+                                <connections>
+                                    <action selector="updateData:" destination="uW4-zd-hg2" eventType="touchUpInside" id="nIf-QL-Kvf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZF1-k1-QEy"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="p6K-kz-XnI"/>
                     <navigationItem key="navigationItem" title="Hello" id="UAR-TR-SL8"/>
@@ -506,14 +504,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23e-QP-TVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.6666666666667" y="787.5"/>
+            <point key="canvasLocation" x="1066.1538461538462" y="786.96682464454977"/>
         </scene>
         <!--Push Button-->
         <scene sceneID="WzB-I3-YiA">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Yye-er-aQz" customClass="NextViewController" customModule="diary_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57p-4w-30O">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85n-Ad-ru5">
@@ -561,7 +559,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="djF-aa-2rq"/>
+        <segue reference="55U-uN-7cP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-button" width="240" height="70"/>
@@ -570,9 +568,10 @@
         <image name="cansel-button" width="240" height="70"/>
         <image name="deskclock.fill" catalog="system" width="128" height="124"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
-        <image name="goal_bg" width="390" height="844"/>
+        <image name="goal_bg" width="780" height="1688"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="meal_background" width="780" height="1688"/>
+        <image name="navigation_shadow" width="780" height="2"/>
         <image name="okaeru" width="1024" height="768"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
