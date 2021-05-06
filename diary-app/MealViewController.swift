@@ -49,12 +49,19 @@ class MealViewController: UIViewController, UITextFieldDelegate {
         calLabel.text = String(3)
         
         view.backgroundColor = Pallet.bg_light_blue
+        // 背景色
+        timingSegment.backgroundColor = UIColor.white
+        // 選択時の背景色
+        if #available(iOS 13.0, *) {
+            timingSegment.selectedSegmentTintColor = Pallet.bg_light_blue
+        }
+//        } else {
+//            timingSegment.tintColor = Pallet.bg_light_blue
+//        }
+        // 文字色
+        timingSegment.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor:Pallet.text_dark_gray], for: .normal)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // NavigationBarのTitleを設定
-        self.parent?.navigationItem.title = "食事を記録する"
-    }
     
     @IBAction func priceValue(_ sender: UISlider) {
         price = Int(sender.value)
