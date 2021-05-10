@@ -13,4 +13,5 @@ target 'diary-app' do
   pod 'AWSDynamoDB'
   pod 'AWSAppSync'
   pod 'Amplify'
+  pod 'SPStorkController'
 end
