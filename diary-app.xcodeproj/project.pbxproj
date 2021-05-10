@@ -25,6 +25,7 @@
 		C1890E3B2641CB4E00366F78 /* MealTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1890E3A2641CB4E00366F78 /* MealTopViewController.swift */; };
 		C1890E3D2641CFD600366F78 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = C1890E3C2641CFD500366F78 /* Fonts */; };
 		C18F7C47261DEA15007A8813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F7C46261DEA15007A8813 /* User.swift */; };
+		C1B24CA126499DFB002F2E29 /* GoalSmallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B24CA026499DFB002F2E29 /* GoalSmallViewController.swift */; };
 		C1C1A45E25F51923005D5784 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A45D25F51923005D5784 /* ProfileViewController.swift */; };
 		C1C1A46F25F529D4005D5784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */; };
 		C1E4141A26178C4000CC3B03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4141926178C4000CC3B03 /* API.swift */; };
@@ -56,6 +57,7 @@
 		C1890E3A2641CB4E00366F78 /* MealTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTopViewController.swift; sourceTree = "<group>"; };
 		C1890E3C2641CFD500366F78 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		C18F7C46261DEA15007A8813 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1B24CA026499DFB002F2E29 /* GoalSmallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSmallViewController.swift; sourceTree = "<group>"; };
 		C1C1A45D25F51923005D5784 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1C1A46E25F529D4005D5784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		C1E4141926178C4000CC3B03 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +130,7 @@
 				C1858CCA2623F21F007C0503 /* EditProfileViewController.swift */,
 				C1858CE026268CD3007C0503 /* SplashViewController.swift */,
 				C1890E3A2641CB4E00366F78 /* MealTopViewController.swift */,
+				C1B24CA026499DFB002F2E29 /* GoalSmallViewController.swift */,
 			);
 			path = "diary-app";
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				C1437C0F25F9B7BC00D7CBEA /* WeightViewController.swift in Sources */,
 				C1670C5F2619A6D600C7F7F3 /* PostWeightViewController.swift in Sources */,
 				C1ECD68825F68A4C00C0BAC2 /* Constants.swift in Sources */,
+				C1B24CA126499DFB002F2E29 /* GoalSmallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import AWSMobileClient
 import AWSS3
 import AWSAppSync
 import AWSDynamoDB
+import SPStorkController
 
 class GoalViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate {
 
@@ -24,11 +25,6 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
 
         appSyncClient = appDelegate.appSyncClient
         
-        // 画面のどこかがタップされた時にdismissKeyboard関数を呼び出す
-        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tapGR.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapGR)
-        goalTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,33 +37,32 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
         
     }
     
-    // goalを更新する
-    // DynamoDBのデータを更新する
-    func runMutation(){
+    @IBAction func pushGoalButton(_ sender: Any) {
         
-        // UpdateUserInput関数：入力パラメータを作成
-        let mutationInput = UpdateUserInput(id: self.appDelegate.id, username: self.appDelegate.username, star: self.appDelegate.star, goal: self.goalTextField.text)
+        guard let sb = storyboard,
+            let vc = sb.instantiateViewController(withIdentifier: "GoalSmallVC") as? GoalSmallViewController else { return }
+
+        let transitionDelegate = SPStorkTransitioningDelegate()
+
+        // transitionDelegateのカスタマイズはここで行う
+        //（vc.transitioningDelegate = transitionDelegateの前）
+        transitionDelegate.customHeight = 350
+        transitionDelegate.indicatorColor = UIColor.white
+        transitionDelegate.indicatorMode = .alwaysArrow
+        // Exitボタン（×）を表示するか
+        transitionDelegate.showCloseButton = false
+        // 後ろにある親Viewをタップすることで子Viewを閉じるようにするか
+        transitionDelegate.tapAroundToDismissEnabled = true
+        // 子Viewの角度（コーナをどれだけ丸くするか）
+        transitionDelegate.cornerRadius = 10
         
-        // CreateTodoMutation関数：
-        // AppSyncのcreateTodoに設定されているresolverを実行し，DynamoDBにデータを追加する
-        appSyncClient?.perform(mutation: UpdateUserMutation(input: mutationInput)) { (result, error) in
-            if let error = error as? AWSAppSyncClientError {
-                print("Error occurred: \(error.localizedDescription )")
-            }
-            
-            // Weight, Mealの時ここでエラーになる（データは追加できている）
-//            if let resultError = result?.errors{
-//                // すでに同じusernameが登録されている場合、このエラーになる
-//                print("Error saving the item on server: \(resultError)")
-//                return
-//            }
-            
-            print("データを追加（runMutation）")
-            //print("Mutation complete.")
-            //self.runQuery()
-        }
- 
+        vc.transitioningDelegate = transitionDelegate
+        vc.modalPresentationStyle = .custom
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        self.present(vc, animated: true, completion: nil)
     }
+    
+
     // runQueryではなくこちらを使う
     // DynamoDBからデータを取得
     func fetchDynamoDBData(){
@@ -98,51 +93,8 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
     
     }
     
-    // キーボードを閉じる（画面のどこかが押された時に呼び出される）
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
-    
-    // Returnキーが押されたらキーボードを閉じる
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        goalTextField.resignFirstResponder()
-        return true
-    }
-    
-    /*
-    // DynamoDBからデータを取得
-    func runQuery(){
 
-        appSyncClient?.fetch(query: ListUsersQuery()) {(result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-                return
-            }
-            result?.data?.listUsers?.items!.forEach { print(($0?.username)! + " " + ($0?.goal)!) }
-            print("データを取得（runQuery）")
-        }
-        
-//        // 2回実行されてしまう（cachePolicyは消したら取得できなくなった）
-//        appSyncClient?.fetch(query: ListUsersQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
-//            if error != nil{
-//                print(error?.localizedDescription ?? "")
-//                return
-//            }
-//            print("データを取得（runQuery）")
-//            //print("Query complete.")
-//            // 取得したレコードのnameとdescriptionをコンソールに表示
-////            result?.data?.listUsers?.items!.forEach {
-////                print(($0?.username)! + " \($0?.star)!")
-////            }
-//            result?.data?.listUsers?.items!.forEach {
-//                print(($0?.username)! + " " + ($0?.goal)!)
-//
-//            }
-//
-//        }
-        
-    }
-    
+    /*
     // DynamoDBへのレコード追加状況を表示
     var discard: Cancellable?
     func subscribe() {
@@ -166,34 +118,9 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
         }
  
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // NavigationBarのTitleを設定
-        self.parent?.navigationItem.title = "目標"
-        // 背景色を設定
-        view.backgroundColor = Pallet.bg_light_blue
-    }
     */
-    
-    // DynamoDBにデータを追加する
-    @IBAction func pushDataToDynamo(_ sender: Any) {
-        runMutation()
-    }
-    
-    // DyanmoDBからデータを取得する
-    @IBAction func getDynamoData(_ sender: Any) {
-        fetchDynamoDBData()
-    }
-    /*
-    // DyanmoDBにデータが追加されたらそのデータを取得する（アップデート情報など）
-    @IBAction func startSubscribe(_ sender: Any) {
-        subscribe()
-    }
-    
-    */
-    @IBAction func pushNextButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toSecond", sender: nil)
-    }
+
+
     
     @IBAction func pushS3Button(_ sender: Any) {
         /* S3はとりあえず使わない
