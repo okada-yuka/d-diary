@@ -361,6 +361,13 @@
                                     <action selector="pushGoalButton:" destination="6KQ-du-RRg" eventType="touchUpInside" id="iGp-KX-Xoy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-92-ZQd">
+                                <rect key="frame" x="32" y="686" width="137" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pushStartButton:" destination="6KQ-du-RRg" eventType="touchUpInside" id="yCz-az-nJo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b2Z-ws-ggY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

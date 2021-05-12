@@ -37,8 +37,18 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
         
     }
     
+    
+    @IBAction func pushStartButton(_ sender: Any) {
+        showChildView()
+    }
+    
+    
     @IBAction func pushGoalButton(_ sender: Any) {
-        
+        showChildView()
+    }
+    
+
+    func showChildView(){
         guard let sb = storyboard,
             let vc = sb.instantiateViewController(withIdentifier: "GoalSmallVC") as? GoalSmallViewController else { return }
 
@@ -61,8 +71,6 @@ class GoalViewController: UIViewController, UINavigationControllerDelegate, UITe
         vc.modalPresentationCapturesStatusBarAppearance = true
         self.present(vc, animated: true, completion: nil)
     }
-    
-
     // runQueryではなくこちらを使う
     // DynamoDBからデータを取得
     func fetchDynamoDBData(){
